@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="3" name="Failed suite [PureBroker_Smoke]" parallel="methods">
+  <parameter name="webSite" value="http://ald-edgesrv:8091/SelfService/index.html?domain=eisbroker.siriusfs.com"/>
+  <parameter name="deviceHost" value="localhost"/>
+  <parameter name="os" value="Windows"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="os_version" value="10"/>
+  <parameter name="devicePort" value="8085"/>
+  <parameter name="browserName" value="chrome_windows"/>
+  <parameter name="browser_version" value="62"/>
+  <parameter name="env" value="Staging"/>
+  <parameter name="securityTest" value="false"/>
+  <test name="Default test(failed)" parallel="methods">
+    <classes>
+      <class name="com.pure.HouseHold.Sprint_02">
+        <methods>
+          <include name="init"/>
+          <include name="beforeSuite"/>
+          <include name="TC_006" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.pure.HouseHold.Sprint_02 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [PureBroker_Smoke] -->

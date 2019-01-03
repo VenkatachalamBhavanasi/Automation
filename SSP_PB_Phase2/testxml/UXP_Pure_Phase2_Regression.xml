@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="PureBroker_Smoke" verbose="3" parallel="true">
+	<parameter name="securityTest" value="false" />
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="5551" />
+	<parameter name="browserName" value="chrome_windows"></parameter>
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="browser_version" value="62"></parameter>
+	<parameter name="os" value="Windows"></parameter>
+	<parameter name="os_version" value="7"></parameter>
+	<parameter name="env" value="${site}"></parameter>
+	<parameter name="webSite" value="http://ald-edgesrv:8091/EIS-SSC"></parameter>
+
+	<test name="UXP_SS_Sprint2" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.HouseHold.Sprint_02" />
+		</classes>
+	</test>
+
+	<test name="UXP_SS_Sprint3" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.HouseHold.Sprint_03" />
+		</classes>
+	</test>
+
+	<test name="UXP_SS_Sprint4" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.HouseHold.Sprint_04"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint5" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.HouseHold.Sprint_05"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint7" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_20385_Motor"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint8" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_20385_Household"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint9_18688_Household" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_18688_Household"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint9_18688_Motor" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_18688_Motor"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint9_18689_Household" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_18689_Household"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint9_18689_Motor" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_18689_Motor"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint10" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_18690"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint11_18691" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_18691"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint11_22748_CPA" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_22748_CPA"/>
+		</classes>
+	</test>
+	
+	<test name="UXP_SS_Sprint13" parallel="methods" thread-count="1">
+		<classes>
+			<class name="com.pure.Renewal.Renewal_7288"/>
+		</classes>
+	</test>
+	
+</suite> 

@@ -1,0 +1,12 @@
+17-Oct-2018 10:59:15:974 INFO  [DataUtils] Data utils base path: C:\Users\venkatachalam.bhavan\git\Arwen-SeleniumTests\SSP_PB_Phase2\src\main\resources\testdata\ 
+17-Oct-2018 10:59:16:394 INFO  [PoolService-0]  
+17-Oct-2018 10:59:16:394 INFO  [PoolService-0] ****             Check that the policy details section has the following details Policy No, Line Of Business, Insurer, Status,  Insured Item, Policy Term, Expiry Date, Renewal Date<small><b><i>[chrome_windows]</b></i></small>             ***** 
+17-Oct-2018 10:59:16:395 INFO  [PoolService-0]  
+17-Oct-2018 10:59:16:395 INFO  [PoolService-0]  
+17-Oct-2018 10:59:16:397 INFO  [PoolService-0] ****             TC_10567 [Default test]             ***** 
+17-Oct-2018 10:59:16:397 INFO  [PoolService-0]  
+17-Oct-2018 10:59:16:506 DEBUG [PoolService-0] Page URL:: data:, 
+17-Oct-2018 10:59:16:507 DEBUG [PoolService-0] Page Load Wait: (Sync) 
+17-Oct-2018 10:59:17:221 DEBUG [PoolService-0] Page URL:: http://ald-edgesrv:8091/selfservice/index.html?domain=eisbroker.siriusfs.com 
+17-Oct-2018 10:59:17:223 DEBUG [PoolService-0] Page Load Wait: (Sync) 
+17-Oct-2018 10:59:34:429 INFO  [PoolService-0] ****             -E---N---D-             ***** 

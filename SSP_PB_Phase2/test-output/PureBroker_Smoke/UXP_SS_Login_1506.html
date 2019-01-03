@@ -1,0 +1,1097 @@
+<html>
+<head>
+<title>TestNG:  UXP_SS_Login_1506</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>UXP_SS_Login_1506</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Mar 05 13:02:28 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>619 seconds (619936 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_001_003()'><b>TC_001_003</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: To Check Email Address & Password textbox, Sign in & Cancel buttons, Remember my email address checkbox and Reset my password link are displayed in login page and To Check that the system redirects to 'Customer data screen' when entering valid Email address & password in the Login screen and click on Sign in button<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-436047603" onClick='toggleBox("Output-436047603", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-436047603" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-436047603">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">To Check Email Address & Password textbox, Sign in & Cancel buttons, Remember my email address checkbox and Reset my password link are displayed in login page and To Check that the system redirects to 'Customer data screen' when entering valid Email address & password in the Login screen and click on Sign in button<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_001_003 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:32 963 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:32 964 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 783 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 783 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 881 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 902 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 902 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Customer Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_001_003_UXP_SS_Login_1506_1.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:47 018 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:49 450 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_001_003_UXP_SS_Login_1506_3.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 081 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 082 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 170 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 190 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 190 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 303 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 425 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 576 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 669 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: button[title='Cancel']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 788 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: [class='checkbox checkbox-info checkbox-inline']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 903 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: a[title='Reset my password'] span]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 903 - All elements checked on this page:: [fldEmailAddress, fldPassword, btnCustomerSignIn, btnCancel, chkRememberMyEmailAddress, lnkReserMyPassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Email Address & Password textbox, Sign in & Cancel buttons, Remember my email address checkbox and Reset my password link are not displayed in login page&emsp;<a href=".\ScreenShot\" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Email Address & Password textbox, Sign in & Cancel buttons, Remember my email address checkbox and Reset my password link are displayed in login page&emsp;<a href=".\ScreenShot\TC_001_003_UXP_SS_Login_1506_6.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:51 508 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_001_003_UXP_SS_Login_1506_8.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:52 323 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_001_003_UXP_SS_Login_1506_9.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:53 091 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:01 043 - <b>7</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_001_003_UXP_SS_Login_1506_11.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 130 - <b>10</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 169 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 169 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 247 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 302 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 304 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 367 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 471 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ddb7516d838d06e895c630877c2c9b06)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 471 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Customer Dashboard Page is not verified&emsp;<a href=".\ScreenShot\" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Customer Dashboard Page is verified&emsp;<a href=".\ScreenShot\TC_001_003_UXP_SS_Login_1506_13.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Check client analytic data manually for login.&emsp;</div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_004()'><b>TC_004</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: To Check that an error message 'Username / Password Incorrect' is prompted when entering invalid Email address or password in the Login screen<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-610547303" onClick='toggleBox("Output-610547303", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-610547303" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-610547303">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">To Check that an error message "Username / Password Incorrect" is prompted when entering invalid Email address or password in the Login screen<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_004 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:18 209 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:18 210 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:32 022 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:32 023 - <b>9</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:32 105 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7ceb426696421186121c1139ede88334)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:32 119 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:32 120 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Customer Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_004_UXP_SS_Login_1506_151.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:32 754 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7ceb426696421186121c1139ede88334)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 143 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_004_UXP_SS_Login_1506_153.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 680 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 680 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 754 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7ceb426696421186121c1139ede88334)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 768 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 768 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 860 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7ceb426696421186121c1139ede88334)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : Test@t.com&emsp;<a href=".\ScreenShot\TC_004_UXP_SS_Login_1506_155.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:36 577 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7ceb426696421186121c1139ede88334)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Test&emsp;<a href=".\ScreenShot\TC_004_UXP_SS_Login_1506_157.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:37 322 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7ceb426696421186121c1139ede88334)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:39 712 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page <br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:39 712 - <b>2</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Validation message is displayed for incorrect credentials. Message: Username / Password Incorrect.&emsp;<a href=".\ScreenShot\TC_004_UXP_SS_Login_1506_158.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Validation message is displayed for incorrect credentials. Message: Username / Password Incorrect.&emsp;<a href=".\ScreenShot\TC_004_UXP_SS_Login_1506_159.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:41 754 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7ceb426696421186121c1139ede88334)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:41 754 - All elements checked on this page:: [fldEmailAddress]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Login page is displayed for retry.&emsp;<a href=".\ScreenShot\TC_004_UXP_SS_Login_1506_160.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Login page is displayed for retry.&emsp;<a href=".\ScreenShot\TC_004_UXP_SS_Login_1506_161.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_005_Setup()'><b>TC_005_Setup</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: To Check that the Client is able to login to the Self service for the  2nd time without having logout from 1st Session<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-1539109583" onClick='toggleBox("Output-1539109583", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1539109583" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1539109583">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">To Check that the Client is able to login to the Self service for the  2nd time without having logout from 1st Session<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_005_Setup [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-message">&emsp;Login to self service for first session&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:00 407 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:00 407 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:12 317 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:12 317 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:12 413 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5f03235934a2793dffba46a4e68313fd)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:12 430 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:12 431 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Customer Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_005_Setup_UXP_SS_Login_1506_170.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:13 063 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5f03235934a2793dffba46a4e68313fd)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:15 488 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_005_Setup_UXP_SS_Login_1506_171.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:16 008 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:16 008 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:16 080 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5f03235934a2793dffba46a4e68313fd)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:16 095 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:16 095 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:16 172 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5f03235934a2793dffba46a4e68313fd)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_005_Setup_UXP_SS_Login_1506_172.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:17 010 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5f03235934a2793dffba46a4e68313fd)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_005_Setup_UXP_SS_Login_1506_173.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:17 713 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5f03235934a2793dffba46a4e68313fd)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:25 867 - <b>8</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_005_Setup_UXP_SS_Login_1506_174.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:27 715 - <b>10</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:27 733 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:27 733 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:27 806 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5f03235934a2793dffba46a4e68313fd)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:27 828 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:27 828 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:27 889 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5f03235934a2793dffba46a4e68313fd)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:27 985 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5f03235934a2793dffba46a4e68313fd)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:27 986 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Customer Dashboard Page is verified in session 1&emsp;<a href=".\ScreenShot\TC_005_Setup_UXP_SS_Login_1506_175.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Customer Dashboard Page is verified in session 1&emsp;<a href=".\ScreenShot\TC_005_Setup_UXP_SS_Login_1506_176.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Signout link is not clicked&emsp;</div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_005_Verification()'><b>TC_005_Verification</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: To Check that the Client is able to login to the Self service for the  2nd time without having logout from 1st Session<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-342398088" onClick='toggleBox("Output-342398088", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-342398088" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-342398088">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">To Check that the Client is able to login to the Self service for the  2nd time without having logout from 1st Session<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_005_Verification [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-message">&emsp;Login to self service for second session&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:34 999 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:34 999 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:46 874 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:46 875 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:46 963 - Element is displayed:: [[RemoteWebDriver: chrome on XP (57cae1be3e1800dbf6184f8c37d4e087)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:46 980 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:46 980 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Customer Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_005_Verification_UXP_SS_Login_1506_177.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:47 608 - Element is displayed:: [[RemoteWebDriver: chrome on XP (57cae1be3e1800dbf6184f8c37d4e087)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:12:47 609 - All elements checked on this page:: [btnSignIn]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Customer self service page is opened for second time without having logout from 1st session.&emsp;<a href=".\ScreenShot\TC_005_Verification_UXP_SS_Login_1506_178.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Customer self service page is opened for second time without having logout from 1st session.&emsp;<a href=".\ScreenShot\TC_005_Verification_UXP_SS_Login_1506_179.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_008()'><b>TC_008</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: To Check that the Client is redirected to login screen when click on the Sign out option from self service account<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-2119885471" onClick='toggleBox("Output-2119885471", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2119885471" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2119885471">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">To Check that the Client is redirected to login screen when click on the Sign out option from self service account<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_008 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:32 971 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:32 972 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 838 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 839 - <b>9</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 923 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 953 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:45 954 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Customer Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_008_UXP_SS_Login_1506_2.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:47 016 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:49 451 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_008_UXP_SS_Login_1506_4.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 081 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 082 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 174 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 194 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 195 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:50 283 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_008_UXP_SS_Login_1506_5.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:51 102 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_008_UXP_SS_Login_1506_7.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:02:51 941 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:00 656 - <b>8</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_008_UXP_SS_Login_1506_10.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:02 723 - <b>10</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:02 765 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:02 766 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:02 844 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:02 870 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:02 871 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:02 932 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 027 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: li[id*='ITM_4B30B4C0CA2951D419310'] > a]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:03 185 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: li[id='li_C1__ITM_4B30B4C0CA2951D419316'] > a]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Welcome dropdown&emsp;<a href=".\ScreenShot\TC_008_UXP_SS_Login_1506_12.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:06 983 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:06 983 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Signout link from welcome dropdown&emsp;<a href=".\ScreenShot\TC_008_UXP_SS_Login_1506_14.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:07 722 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1e054846873742070cddd24bf74bd5da)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:07 722 - All elements checked on this page:: [btnSignIn]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Customer self service page is not opened after clicking signout from dashboard page.&emsp;<a href=".\ScreenShot\" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Customer self service page is opened after clicking signout from dashboard page.&emsp;<a href=".\ScreenShot\TC_008_UXP_SS_Login_1506_15.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Check client analytic data manually for logout.&emsp;</div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>35</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_009()'><b>TC_009</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: To Check that the Client is able to login to the Self service for the  2nd time without having logout from 1st Session<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-407380879" onClick='toggleBox("Output-407380879", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-407380879" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-407380879">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">To Check that the user is prompted to login again when the user clicks on sign out option in one tab and tries to access the application in other tab<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_009 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:18 293 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:18 293 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:31 463 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:31 463 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:31 547 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:31 564 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:31 564 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Customer Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_150.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:32 247 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:34 678 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_152.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 229 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 229 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 309 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 327 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 327 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:35 404 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_154.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:36 156 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_156.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:36 936 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:44 466 - <b>7</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_162.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:46 371 - <b>9</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:46 388 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:46 388 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:46 465 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:46 487 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:46 488 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:46 548 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:46 662 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:46 662 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Customer Dashboard Page is not Verified in first tab&emsp;<a href=".\ScreenShot\" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Customer Dashboard Page page is verified first tab&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_163.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:48 590 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: li[id*='ITM_4B30B4C0CA2951D419310'] > a]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:48 747 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: li[id='li_C1__ITM_4B30B4C0CA2951D419316'] > a]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Welcome dropdown&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_164.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:52 365 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:52 366 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Signout link from welcome dropdown&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_165.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Switched to new window&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_166.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Launched the url http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_167.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:56 178 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3f5196bb4c3ce52c3db5d441cbace1d4)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:56 178 - All elements checked on this page:: [btnSignIn]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> User is prompted to login page in tab2&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_168.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;User is prompted to login page in tab2&emsp;<a href=".\ScreenShot\TC_009_UXP_SS_Login_1506_169.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Information :: Since duplicate Tab is not feasible through automation, Marking the script as passed</div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_011()'><b>TC_011</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that an error message 'Old Password Is Incorrect' is displayed when the client enters wrong old password  in the Change my Password screen<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-1941802906" onClick='toggleBox("Output-1941802906", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1941802906" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1941802906">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that an error message 'Old Password Is Incorrect'  is displayed when the client enters wrong old password  in the Change my Password screen<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_011 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:08 724 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:08 725 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:23 523 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:23 525 - <b>9</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:23 632 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:23 657 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:23 657 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_16.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:24 339 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:26 754 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_18.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 272 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 272 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 367 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 389 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 389 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 482 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_20.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:28 296 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_22.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:29 040 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:39 132 - <b>10</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_25.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 189 - <b>12</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 213 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 214 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 289 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 314 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 315 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 385 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 496 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 496 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_27.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_29.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:45 880 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: li[id*='ITM_4B30B4C0CA2951D419310'] > a]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:46 059 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: li[id='li_C1__ITM_4B30B4C0CA2951D419316'] > a]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Welcome dropdown<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 165 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 166 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Change Password link from welcome dropdown&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_30.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 744 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 744 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 815 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 908 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 908 - All elements checked on this page:: [btnChangePassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_32.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_34.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:49 061 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: input[name*='CHANGEPASSWORD[1].PASSWORD']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Test@111 - Old Password is enterd in the Old Password field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:51 812 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test@222 - New Password is enterd in the NewPassword field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:54 261 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:56 893 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test@222 - New Password is enterd in the Re-enter NewPassword field&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_36.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:57 493 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:59 927 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;ChangeMyPassword button is clicked<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:30 469 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (3b4df446468e19715e1840da99ddee8f)] -> css selector: .errorClass.PasswordChange]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Old Password Is Incorrect. - Error message is displayed if Wrong old password is entered&emsp;<a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_52.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<!--FAILSOFT--><br/>
+<div class="test-result"><font color="red">&emsp;Old Password Is Incorrect. - Error message is not displayed if Wrong old password is entered</font><a href=".\ScreenShot\TC_011_UXP_SS_Login_1506_53.png" target="_blank" >[ScreenShot]</a></div><br/>
+<!--FAIL--><br/>
+<div class="test-result"><br><font color="red"><strong> Test Failed. Check the steps above in red color. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>83</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_012()'><b>TC_012</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that an error message 'New Passwords must match' is displayed when the client enters mismatch passwords in (Enter new password & Re-enter new password) the Change My Password screen<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-946513423" onClick='toggleBox("Output-946513423", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-946513423" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-946513423">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that an error message 'New Passwords must match' is displayed when the client enters mismatch passwords in (Enter new password & Re-enter new password) the Change My Password screen<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_012 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:11 453 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:11 454 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:24 117 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:24 117 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:24 202 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:24 222 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:24 222 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_17.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:24 880 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 300 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_19.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 855 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 855 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 948 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 970 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:27 970 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:28 060 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_21.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:28 828 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_23.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:29 572 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:39 105 - <b>9</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_24.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 181 - <b>11</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 200 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 200 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 281 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 305 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 305 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 374 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 485 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:41 485 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_26.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_28.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:45 875 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: li[id*='ITM_4B30B4C0CA2951D419310'] > a]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:46 045 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: li[id='li_C1__ITM_4B30B4C0CA2951D419316'] > a]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Welcome dropdown<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 256 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 257 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Change Password link from welcome dropdown&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_31.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 840 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 840 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:47 918 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:48 021 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:48 022 - All elements checked on this page:: [btnChangePassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_33.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_35.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:49 166 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: input[name*='CHANGEPASSWORD[1].PASSWORD']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Test@111 - Old Password is enterd in the Old Password field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:51 855 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test@222 - New Password is enterd in the NewPassword field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:54 276 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:56 908 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test@222v - New Password is enterd in the Re-enter NewPassword field&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_37.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:57 508 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:03:59 924 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;ChangeMyPassword button is clicked<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:00 005 - Element is displayed:: [[RemoteWebDriver: chrome on XP (a7be3386453074186bc0b932a44889d1)] -> css selector: .errorClass.PasswordChange]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> New Passwords must match - Error message is displayed if enters mismatch passwords&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_38.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;New Passwords must match - Error message is displayed if enters mismatch passwords&emsp;<a href=".\ScreenShot\TC_012_UXP_SS_Login_1506_39.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>50</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_016()'><b>TC_016</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that the user is returned to the previous screen when click on 'Cancel' button from the Change My Password screen<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-1993171336" onClick='toggleBox("Output-1993171336", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1993171336" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1993171336">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that the user is returned to the previous screen when click on 'Cancel' button from the Change My Password screen<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_016 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:19 355 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:19 355 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:31 679 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:31 679 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:31 787 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:31 804 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:31 804 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_101.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:32 450 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:34 848 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_102.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:35 363 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:35 364 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:35 441 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:35 457 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:35 457 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:35 541 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_103.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:36 289 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_104.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:36 994 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:46 772 - <b>9</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_107.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:48 744 - <b>11</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:48 761 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:48 761 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:48 842 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:48 868 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:48 868 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:48 932 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:49 035 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:49 036 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_108.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_109.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:53 177 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: li[id*='ITM_4B30B4C0CA2951D419310'] > a]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:53 323 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: li[id='li_C1__ITM_4B30B4C0CA2951D419316'] > a]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Welcome dropdown<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 344 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 345 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Change Password link from welcome dropdown&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_111.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 895 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 895 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 968 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:55 051 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:55 051 - All elements checked on this page:: [btnChangePassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_112.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_113.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:58 570 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Cancel button is clicked<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:58 673 - Element is displayed:: [[RemoteWebDriver: chrome on XP (0ad14aa60c2e80719c0b2b6b31813bdd)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:58 673 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to Previous page (customer dashboard page) after clicking cancel button in change password page&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_117.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to Previous page (customer dashboard page) after clicking cancel button in change password page&emsp;<a href=".\ScreenShot\TC_016_UXP_SS_Login_1506_118.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>40</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_018()'><b>TC_018</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that the 'Forgotten your login details?' Screen is displayed when click on the 'Forgotten your login detail?' link from SS login page<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-1588469422" onClick='toggleBox("Output-1588469422", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1588469422" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1588469422">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that the 'Forgotten your login details?' Screen is displayed when click on the 'Forgotten your login detail?' link from SS login page<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_018 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:42 617 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:42 618 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 013 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 013 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 115 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3a846808de79dbd7f194850e2eb3d45b)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 133 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 133 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_018_UXP_SS_Login_1506_110.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:54 803 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3a846808de79dbd7f194850e2eb3d45b)] -> css selector: a[title='Forgotten your login details?']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:57 226 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Forgotten Your Login Details Link on Customer Self Service page&emsp;<a href=".\ScreenShot\TC_018_UXP_SS_Login_1506_114.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:57 732 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:57 732 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:57 819 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3a846808de79dbd7f194850e2eb3d45b)] -> css selector: #C2__BUT_3D8461446F669061151189]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:57 908 - Element is displayed:: [[RemoteWebDriver: chrome on XP (3a846808de79dbd7f194850e2eb3d45b)] -> css selector: #C2__BUT_3D8461446F669061151189]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:57 908 - All elements checked on this page:: [btnResetMyPassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to Customer Forgotten Password Page&emsp;<a href=".\ScreenShot\TC_018_UXP_SS_Login_1506_115.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to Customer Forgotten Password Page&emsp;<a href=".\ScreenShot\TC_018_UXP_SS_Login_1506_116.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:58 953 - Moved to element</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:29 215 - Unable to find a element after 30 sec ==> Proxy element for: DefaultElementLocator 'By.cssSelector: #p1_GRP_3D8461446F669061149905'</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:29 216 - Missing element on this page:: [mdlForgottenYourLoginDetails]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> 'Forgotten your login details?' Screen is displayed when click on the 'Forgotten your login detail?' link from SS login page&emsp;<a href=".\ScreenShot\TC_018_UXP_SS_Login_1506_123.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<!--FAILSOFT--><br/>
+<div class="test-result"><font color="red">&emsp;'Forgotten your login details?' Screen is not displayed when click on the 'Forgotten your login detail?' link from SS login page</font><a href=".\ScreenShot\TC_018_UXP_SS_Login_1506_124.png" target="_blank" >[ScreenShot]</a></div><br/>
+<!--FAIL--><br/>
+<div class="test-result"><br><font color="red"><strong> Test Failed. Check the steps above in red color. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_021_022()'><b>TC_021_022</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that the user is able to enter their email address manually in the Forgotten your login detail screen and Check that the user is restricted in the Forgotten your login detail screen when captcha is not completed successfully<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-1080292219" onClick='toggleBox("Output-1080292219", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1080292219" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1080292219">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that the user is able to enter their email address manually in the Forgotten your login detail screen and Check that the user is restricted in the Forgotten your login detail screen when captcha is not completed successfully<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_021_022 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:05 106 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:05 107 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:17 269 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:17 269 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:17 385 - Element is displayed:: [[RemoteWebDriver: chrome on XP (b39093f0d75cc446a8b71ee7dad75d4a)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:17 404 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:17 405 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_40.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:18 069 - Element is displayed:: [[RemoteWebDriver: chrome on XP (b39093f0d75cc446a8b71ee7dad75d4a)] -> css selector: a[title='Forgotten your login details?']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:20 457 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Forgotten Your Login Details Link on Customer Self Service page&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_41.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:20 967 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:20 967 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:21 047 - Element is displayed:: [[RemoteWebDriver: chrome on XP (b39093f0d75cc446a8b71ee7dad75d4a)] -> css selector: #C2__BUT_3D8461446F669061151189]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:21 150 - Element is displayed:: [[RemoteWebDriver: chrome on XP (b39093f0d75cc446a8b71ee7dad75d4a)] -> css selector: #C2__BUT_3D8461446F669061151189]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:21 151 - All elements checked on this page:: [btnResetMyPassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to Customer Forgotten Password Page&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_42.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to Customer Forgotten Password Page&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_43.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:22 220 - Element is displayed:: [[RemoteWebDriver: chrome on XP (b39093f0d75cc446a8b71ee7dad75d4a)] -> css selector: #C2__email-address-fgt]</small> </font> </div><br/>
+<div class="test-message">&emsp;manoe@test.com - email address is enterd in the field&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_44.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;manoe@test.com - email address is displayed in the email address field <br/>
+<div class="test-result"><br><font color="red"><strong> User is able to enter their email address manually in the Forgotten your login detail screen&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_45.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;User is able to enter their email address manually in the Forgotten your login detail screen&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_46.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:23 932 - Element is displayed:: [[RemoteWebDriver: chrome on XP (b39093f0d75cc446a8b71ee7dad75d4a)] -> css selector: #C2__BUT_3D8461446F669061151189]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Reset My Password Button&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_47.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:24 577 - Element is displayed:: [[RemoteWebDriver: chrome on XP (b39093f0d75cc446a8b71ee7dad75d4a)] -> css selector: #C2__isGoogleRecaptchaVerified_ERRORMESSAGE]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:24 577 - All elements checked on this page:: [txtPleaseCheckTheCheckboxError]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> 'Please check the checkbox' Error message is displayed when captcha is not completed&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_48.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;'Please check the checkbox' Error message is displayed when captcha is not completed&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_49.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:25 619 - Element is displayed:: [[RemoteWebDriver: chrome on XP (b39093f0d75cc446a8b71ee7dad75d4a)] -> css selector: #C2__BUT_3D8461446F669061151189]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:25 619 - All elements checked on this page:: [btnResetMyPassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> User is restricted in the Forgotten your login detail screen when captcha is not completed successfully&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_50.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;User is restricted in the Forgotten your login detail screen when captcha is not completed successfully&emsp;<a href=".\ScreenShot\TC_021_022_UXP_SS_Login_1506_51.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_027()'><b>TC_027</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that a message 'Your new password should be at least 8 characters long, be mixed case and contain alpha, numeric and symbol characters.' is displayed when entered password does not meet password complexity rule<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-572651691" onClick='toggleBox("Output-572651691", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-572651691" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-572651691">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that the Password meets all following criteria 'password should be at least 8 characters long, be mixed case and contain alpha, numeric and symbol characters'<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_027 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:29 823 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:29 824 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:42 065 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:42 065 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:42 167 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:42 190 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:42 191 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-result"><br><font color="green"><strong> Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com </strong></font> </div>&emsp;<br/>
+<div class="test-result"><br><font color="green"><strong> Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_54.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:42 833 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:45 221 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_55.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:45 768 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:45 768 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:45 863 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:45 882 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:45 882 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:45 970 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_56.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:46 848 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_57.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:47 624 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:57 278 - <b>9</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_62.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 235 - <b>11</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 257 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 258 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 350 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 374 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 375 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 442 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 550 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 551 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_63.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_65.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:03 724 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: li[id*='ITM_4B30B4C0CA2951D419310'] > a]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:03 857 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: li[id='li_C1__ITM_4B30B4C0CA2951D419316'] > a]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Welcome dropdown<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:05 018 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:05 018 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Change Password link from welcome dropdown&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_68.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:05 552 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:05 553 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:05 635 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:05 723 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:05 723 - All elements checked on this page:: [btnChangePassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_69.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_70.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:06 896 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: input[name*='CHANGEPASSWORD[1].PASSWORD']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Godwin!333 - Old Password is enterd in the Old Password field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:09 636 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test - New Password is enterd in the NewPassword field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:12 050 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:14 554 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test - New Password is enterd in the Re-enter NewPassword field&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_74.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:15 132 - Element is displayed:: [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:17 543 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;ChangeMyPassword button is clicked<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:47 638 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__QUE_38B8C532070269F718363_ERRORMESSAGE]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is displayed when entered New password ( Test ) does not meet password complexity rule&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_76.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<!--FAILSOFT--><br/>
+<div class="test-result"><font color="red">&emsp;Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is not displayed when entered New password ( Test ) does not meet password complexity rule</font><a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_77.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:19 152 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__QUE_38B8C532070269F718366_ERRORMESSAGE]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is displayed when re-entered New password ( Test ) does not meet password complexity rule&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_80.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<!--FAILSOFT--><br/>
+<div class="test-result"><font color="red">&emsp;Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is not displayed when re-entered New password ( Test ) does not meet password complexity rule</font><a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_81.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:22 762 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test@111 - New Password is enterd in the NewPassword field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:29 191 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:31 753 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test@111 - New Password is enterd in the Re-enter NewPassword field&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_84.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:02 751 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__QUE_38B8C532070269F718363_ERRORMESSAGE]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is not displayed when entered New password ( Test@111 ) which meet password complexity rule&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_92.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is not displayed when entered New password ( Test@111 ) which meet password complexity rule&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_93.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:38 364 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (4f815cfb0190a2c835975b847b654c53)] -> css selector: #C2__QUE_38B8C532070269F718366_ERRORMESSAGE]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is not displayed when re-entered New password ( Test@111 ) which meet password complexity rule&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_105.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is not displayed when re-entered New password ( Test@111 ) which meet password complexity rule&emsp;<a href=".\ScreenShot\TC_027_UXP_SS_Login_1506_106.png" target="_blank" >[ScreenShot]</a></div><br/>
+<!--FAIL--><br/>
+<div class="test-result"><br><font color="red"><strong> Test Failed. Check the steps above in red color. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>189</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_028()'><b>TC_028</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that a message 'Your new password cannot be one of the last eight passwords that you have used' is displayed while resetting the  password from previous 8 passwords <br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-595268385" onClick='toggleBox("Output-595268385", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-595268385" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-595268385">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that a message 'Your new password cannot be one of the last eight passwords that you have used' is displayed while resetting the  password from previous 8 passwords<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_028 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:02 856 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:02 856 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:14 479 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:14 480 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:14 584 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:14 606 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:14 606 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-result"><br><font color="green"><strong> Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com </strong></font> </div>&emsp;<br/>
+<div class="test-result"><br><font color="green"><strong> Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_119.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:15 245 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:17 661 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_120.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:18 179 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:18 179 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:18 254 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:18 273 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:18 273 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:18 356 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_121.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:19 079 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_122.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:19 779 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:29 862 - <b>10</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_125.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:32 458 - <b>12</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:32 477 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:32 478 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:32 554 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:32 579 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:32 579 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:32 649 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:32 759 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:32 759 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_126.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_127.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:37 024 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: li[id*='ITM_4B30B4C0CA2951D419310'] > a]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:37 174 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: li[id='li_C1__ITM_4B30B4C0CA2951D419316'] > a]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Welcome dropdown<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:38 641 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:38 641 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Change Password link from welcome dropdown&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_128.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:39 189 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:39 190 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:39 270 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:39 358 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:39 358 - All elements checked on this page:: [btnChangePassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_129.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_130.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:40 446 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: input[name*='CHANGEPASSWORD[1].PASSWORD']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Godwin!333 - Old Password is enterd in the Old Password field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:43 157 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Godwin!333 - New Password is enterd in the NewPassword field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:45 596 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:48 207 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Godwin!333 - New Password is enterd in the Re-enter NewPassword field&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_132.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:48 808 - Element is displayed:: [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:51 174 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;ChangeMyPassword button is clicked<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:21 326 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (606d567dc8f32cedf85e0d55127dbac6)] -> css selector: .errorClass.PasswordChange]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Your new password cannot be one of the last eight passwords that you have used - Error message is displayed while resetting the  password from previous 8 passwords&emsp;<a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_141.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<!--FAILSOFT--><br/>
+<div class="test-result"><font color="red">&emsp;Your new password cannot be one of the last eight passwords that you have used - Error message is not displayed while resetting the  password from previous 8 passwords</font><a href=".\ScreenShot\TC_028_UXP_SS_Login_1506_142.png" target="_blank" >[ScreenShot]</a></div><br/>
+<!--FAIL--><br/>
+<div class="test-result"><br><font color="red"><strong> Test Failed. Check the steps above in red color. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>79</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_029()'><b>TC_029</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that a message 'Your new password should be at least 8 characters long, be mixed case and contain alpha, numeric and symbol characters.' is displayed when entered password does not meet password complexity rule<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-268409992" onClick='toggleBox("Output-268409992", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-268409992" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-268409992">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that a message 'Your new password should be at least 8 characters long, be mixed case and contain alpha, numeric and symbol characters.' is displayed when entered password does not meet password complexity rule<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_029 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:35 076 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:35 077 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:47 127 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:47 127 - <b>8</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:47 236 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:47 254 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:47 254 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_58.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:48 002 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:50 449 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_59.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:51 190 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:51 190 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:51 298 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:51 321 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:51 321 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:51 464 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_60.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:52 317 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_61.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:53 203 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:04:59 558 - <b>6</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_64.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:01 634 - <b>8</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:01 656 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:01 657 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:01 739 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:01 765 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:01 766 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:01 834 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:01 941 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:01 941 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_66.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Custdashboardpage Verified&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_67.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:06 092 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: li[id*='ITM_4B30B4C0CA2951D419310'] > a]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:06 235 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: li[id='li_C1__ITM_4B30B4C0CA2951D419316'] > a]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Welcome dropdown<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:07 384 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:07 384 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Change Password link from welcome dropdown&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_71.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:07 917 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:07 917 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:07 993 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:08 086 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:08 086 - All elements checked on this page:: [btnChangePassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_72.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to customer change password page&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_73.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:09 182 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: input[name*='CHANGEPASSWORD[1].PASSWORD']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Godwin!333 - Old Password is enterd in the Old Password field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:11 871 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test - New Password is enterd in the NewPassword field<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:14 304 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:16 869 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Test - New Password is enterd in the Re-enter NewPassword field&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_75.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:17 471 - Element is displayed:: [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: button[id='C2__change-pwd']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:19 917 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;ChangeMyPassword button is clicked<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:05:49 980 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: #C2__QUE_38B8C532070269F718363_ERRORMESSAGE]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is displayed when entered New password does not meet password complexity rule&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_78.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<!--FAILSOFT--><br/>
+<div class="test-result"><font color="red">&emsp;Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is not displayed when entered New password does not meet password complexity rule</font><a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_79.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:21 460 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (e271405e36bc962791f710a03e643aab)] -> css selector: #C2__QUE_38B8C532070269F718366_ERRORMESSAGE]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is displayed when re-entered New password does not meet password complexity rule&emsp;<a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_82.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<!--FAILSOFT--><br/>
+<div class="test-result"><font color="red">&emsp;Your new password should be at least 8 characters long, be mixed case and contain alphanumeric and symbol characters - is not displayed when re-entered New password does not meet password complexity rule</font><a href=".\ScreenShot\TC_029_UXP_SS_Login_1506_83.png" target="_blank" >[ScreenShot]</a></div><br/>
+<!--FAIL--><br/>
+<div class="test-result"><br><font color="red"><strong> Test Failed. Check the steps above in red color. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>107</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_031()'><b>TC_031</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Incorrect Password, account locked out<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-617651271" onClick='toggleBox("Output-617651271", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-617651271" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-617651271">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that Analytic Client Data - Incorrect Password, account locked out<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_031 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:25 723 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:25 724 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:37 739 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:37 739 - <b>8</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:37 834 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:37 852 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:37 852 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_031_UXP_SS_Login_1506_85.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:38 488 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:40 894 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_031_UXP_SS_Login_1506_86.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:41 414 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:41 414 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:41 492 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:41 511 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:41 511 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:41 593 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : rahulk@test.com<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:41 827 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Test<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:42 005 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:44 405 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_031_UXP_SS_Login_1506_87.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:45 274 - <b>3</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:45 351 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : rahulk@test.com<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:45 553 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Test<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:45 741 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:48 094 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_031_UXP_SS_Login_1506_88.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:48 962 - <b>3</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:49 024 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : rahulk@test.com<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:49 181 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Test<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:49 343 - Element is displayed:: [[RemoteWebDriver: chrome on XP (5edbc192325eeefcc95c75d85b10b24b)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:51 693 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_031_UXP_SS_Login_1506_89.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:52 564 - <b>3</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Account is locked. : Error message is displayed after 3 unsuccessfully login attempt with incorrect password&emsp;<a href=".\ScreenShot\TC_031_UXP_SS_Login_1506_90.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Account is locked. : Error message is displayed after 3 unsuccessfully login attempt with incorrect password&emsp;<a href=".\ScreenShot\TC_031_UXP_SS_Login_1506_91.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Check client analytic data manually for Incorrect Password and not covered through automation, 'Account locked out'&emsp;</div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_073()'><b>TC_073</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that 'Marketing Preference' inside Correspondence preference is updated when selecting a checkbox and click on Save button<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-1278580215" onClick='toggleBox("Output-1278580215", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1278580215" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1278580215">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that 'Marketing Preference' inside Correspondence preference is updated when selecting a checkbox and click on Save button<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_073 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:33 869 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:33 870 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:46 777 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:46 777 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:46 874 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:46 892 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:46 892 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_131.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:47 536 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:49 951 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign In button on Customer Self Service page &emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_133.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:50 461 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:50 461 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:50 568 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:50 589 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:50 589 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:50 671 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: #C2__email_address]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Email Address : manoe@test.com&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_134.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:51 404 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: #C2__password]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password : Godwin!333&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_135.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:52 133 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: #C2__sign_in]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:08:58 833 - <b>6</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Sign in button on login page &emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_136.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:00 686 - <b>8</b> - Clicked Sign in button on login page - com.pure.selfservice.pages.CustomerSignInPage.clickSignInButton(CustomerSignInPage.java:154)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:00 710 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:00 710 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:00 784 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:00 885 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: h2[class*='page-title']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:00 885 - All elements checked on this page:: [txtCustomerName]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Customer Dashboardpage is verified&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_137.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Customer Dashboardpage is verified&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_138.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:04 733 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: button[id*=ID_MANAGE_PREFERENCES]]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on 'Manage Preferences' button</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:07 203 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:07 300 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> xpath: //h2[starts-with(text(), 'Correspondence Preference')]]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Verified that the 'Correspondence Preference' modal is opened&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_139.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Verified that the 'Correspondence Preference' modal is opened&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_140.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:41 631 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: input[id*='QUE_90BD42C1720991FC221473_0']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Selected the marketing preference option 'No'</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:44 092 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;isUpdateSuccessful: [true]</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:48 140 - <b>3</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on 'Save' button in 'Manage Preference' modal</div><br/>
+<div class="test-result"><br><font color="red"><strong> Verified that the 'Marketing Preference' update is successful&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_143.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Verified that the 'Marketing Preference' update is successful&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_144.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:51 956 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: button[id*=ID_MANAGE_PREFERENCES]]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on 'Manage Preferences' button</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:54 388 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:09:54 461 - Element is displayed:: [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> xpath: //h2[starts-with(text(), 'Correspondence Preference')]]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Verified that the 'Correspondence Preference' modal is opened&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_145.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Verified that the 'Correspondence Preference' modal is opened&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_146.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:10:28 547 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: input[id*='QUE_90BD42C1720991FC221473_0']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Selected the marketing preference option 'Yes'</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:10:30 994 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Selected the marketing preference 'Email'</div><br/>
+<div class="test-message">&emsp;Selected the marketing preference 'Post'</div><br/>
+<div class="test-message">&emsp;Selected the marketing preference 'Phone'</div><br/>
+<div class="test-message">&emsp;Selected the marketing preference 'SMS'</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:01 369 - Unable to find a element after 30 sec ==> [[RemoteWebDriver: chrome on XP (87a200ded140a662d4ef95ab809b9150)] -> css selector: input[id*='QUE_90BD42C1720991FC221473_0']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Marketing preference details are updated successfully on Manage preference window&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_147.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Clicked on 'Save' button in 'Manage Preference' modal</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:11:11 126 - <b>7</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Verified that the 'Marketing Preference' update is successful&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_148.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Verified that the 'Marketing Preference' update is successful&emsp;<a href=".\ScreenShot\TC_073_UXP_SS_Login_1506_149.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>161</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+<tr>
+<td title='com.pure.selfservice.testscripts.SS_1506.TC_Adh3()'><b>TC_Adh3</b><br>Test class: com.pure.selfservice.testscripts.SS_1506<br>Test method: Check that a valid alert message is displayed when clicking on Reset my Password button without entering email address<br>Parameters: (Browser: chrome, Hub: aspirenav296, Node: ), chrome_XP<br/>
+<a href="#Output-933489234" onClick='toggleBox("Output-933489234", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-933489234" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-933489234">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that a valid alert message is displayed when clicking on Reset my Password button without entering email address<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_Adh3 [UXP_SS_Login_1506]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:57 593 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:06:57 593 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:09 718 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:09 718 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:09 817 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ba0f7370f3588e94b2d8a6c9e1058167)] -> css selector: #C2__BUT_E14D31D21EBB8E7F24944]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:09 838 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:09 839 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-message">&emsp;Self service Landing Page : http://ald-edgesrv:8084/SelfService/index.html?domain=eisbroker.siriusfs.com&emsp;<a href=".\ScreenShot\TC_Adh3_UXP_SS_Login_1506_94.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:10 472 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ba0f7370f3588e94b2d8a6c9e1058167)] -> css selector: a[title='Forgotten your login details?']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:12 875 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Forgotten Your Login Details Link on Customer Self Service page&emsp;<a href=".\ScreenShot\TC_Adh3_UXP_SS_Login_1506_95.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:13 383 - Page URL:: http://ald-edgesrv:8084/selfservice/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:13 383 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:13 457 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ba0f7370f3588e94b2d8a6c9e1058167)] -> css selector: #C2__BUT_3D8461446F669061151189]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:13 542 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ba0f7370f3588e94b2d8a6c9e1058167)] -> css selector: #C2__BUT_3D8461446F669061151189]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:13 542 - All elements checked on this page:: [btnResetMyPassword]</small> </font> </div><br/>
+<div class="test-result"><br><font color="red"><strong> Navigated to Customer Forgotten Password Page&emsp;<a href=".\ScreenShot\TC_Adh3_UXP_SS_Login_1506_96.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Navigated to Customer Forgotten Password Page&emsp;<a href=".\ScreenShot\TC_Adh3_UXP_SS_Login_1506_97.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 05 Mar 13:07:14 604 - Element is displayed:: [[RemoteWebDriver: chrome on XP (ba0f7370f3588e94b2d8a6c9e1058167)] -> css selector: #C2__BUT_3D8461446F669061151189]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked Reset My Password Button&emsp;<a href=".\ScreenShot\TC_Adh3_UXP_SS_Login_1506_98.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="red"><strong> Please enter your email address - Valid alert message is displayed when clicking on Reset my Password button without entering email address&emsp;<a href=".\ScreenShot\TC_Adh3_UXP_SS_Login_1506_99.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Please enter your email address - Valid alert message is displayed when clicking on Reset my Password button without entering email address&emsp;<a href=".\ScreenShot\TC_Adh3_UXP_SS_Login_1506_100.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.pure.selfservice.testscripts.SS_1506@481a15ff</td></tr>
+</table><p>
+</body>
+</html>

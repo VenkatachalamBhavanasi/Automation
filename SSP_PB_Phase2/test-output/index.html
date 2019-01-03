@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-PureBroker_Smoke">
+              <span class="suite-name border-failed">PureBroker_Smoke</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-PureBroker_Smoke">
+                    <span>C:\Users\venkatachalam.bhavan\AppData\Local\Temp\testng-eclipse--1984798327\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-PureBroker_Smoke">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-PureBroker_Smoke">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-PureBroker_Smoke">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-PureBroker_Smoke">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-PureBroker_Smoke">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-PureBroker_Smoke">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-PureBroker_Smoke" class="hide-methods failed suite-PureBroker_Smoke"> (hide)</a> <!-- hide-methods failed suite-PureBroker_Smoke -->
+                      <a href="#" panel-name="suite-PureBroker_Smoke" class="show-methods failed suite-PureBroker_Smoke"> (show)</a> <!-- show-methods failed suite-PureBroker_Smoke -->
+                    </span>
+                    <div class="method-list-content failed suite-PureBroker_Smoke">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PureBroker_Smoke" title="com.pure.HouseHold.Sprint_02" hash-for-method="TC_006((Browser: chrome, Hub: aspirehyd119, Node: ), chrome_XP)">TC_006((Browser: chrome, Hub: aspirehyd119, Node: ), chrome_XP)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-PureBroker_Smoke -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-PureBroker_Smoke" class="panel PureBroker_Smoke">
+          <div class="suite-PureBroker_Smoke-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.pure.HouseHold.Sprint_02</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_006((Browser: chrome, Hub: aspirehyd119, Node: ), chrome_XP)">
+                  </a> <!-- TC_006((Browser: chrome, Hub: aspirehyd119, Node: ), chrome_XP) -->
+                  <span class="method-name">TC_006</span>
+                  <span class="parameters">((Browser: chrome, Hub: aspirehyd119, Node: ), chrome_XP)</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ASPIREHYD119&apos;, ip: &apos;192.168.71.39&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_77&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\VENKAT~1.BHA\AppData\Local\Temp\scoped_dir12780_16644}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=69.0.3497.100, browserConnectionEnabled=false, nativeEvents=true, webdriver.remote.sessionid=af75700df97f45e5ee65e922ae31dd36, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: af75700df97f45e5ee65e922ae31dd36
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:382)
+	at com.generic.support.ScreenshotManager.takeScreenshot(ScreenshotManager.java:32)
+	at com.generic.support.Log.takeScreenShot(Log.java:140)
+	at com.generic.support.Log.exception(Log.java:884)
+	at com.pure.HouseHold.Sprint_02.TC_006(Sprint_02.java:385)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:73)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Check that the policy details section has the following details Policy No, Line Of Business, Insurer, Status,  Insured Item, Policy Term, Expiry Date, Renewal Date)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-PureBroker_Smoke-class-failed -->
+        </div> <!-- panel PureBroker_Smoke -->
+        <div panel-name="test-xml-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\venkatachalam.bhavan\AppData\Local\Temp\testng-eclipse--1984798327\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;3&quot; name=&quot;PureBroker_Smoke&quot; parallel=&quot;methods&quot;&gt;
+  &lt;parameter name=&quot;webSite&quot; value=&quot;http://ald-edgesrv:8091/SelfService/index.html?domain=eisbroker.siriusfs.com&quot;/&gt;
+  &lt;parameter name=&quot;deviceHost&quot; value=&quot;localhost&quot;/&gt;
+  &lt;parameter name=&quot;os&quot; value=&quot;Windows&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;os_version&quot; value=&quot;10&quot;/&gt;
+  &lt;parameter name=&quot;devicePort&quot; value=&quot;8085&quot;/&gt;
+  &lt;parameter name=&quot;browserName&quot; value=&quot;chrome_windows&quot;/&gt;
+  &lt;parameter name=&quot;browser_version&quot; value=&quot;62&quot;/&gt;
+  &lt;parameter name=&quot;env&quot; value=&quot;Staging&quot;/&gt;
+  &lt;parameter name=&quot;securityTest&quot; value=&quot;false&quot;/&gt;
+  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.pure.HouseHold.Sprint_02&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TC_006&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.pure.HouseHold.Sprint_02 --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- PureBroker_Smoke --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for PureBroker_Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for PureBroker_Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for PureBroker_Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_PureBroker_Smoke');
+function tableData_PureBroker_Smoke() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TC_006')
+data.setCell(0, 2, 'com.pure.HouseHold.Sprint_02')
+data.setCell(0, 3, 18494);
+window.suiteTableData['PureBroker_Smoke']= { tableData: data, tableDiv: 'times-div-PureBroker_Smoke'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <div id="times-div-PureBroker_Smoke">
+              </div> <!-- times-div-PureBroker_Smoke -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for PureBroker_Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_006((Browser: chrome, Hub: aspirehyd119, Node: ), chrome_XP)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Check that the policy details section has the following details Policy No, Line Of Business, Insurer, Status,  Insured Item, Policy Term, Expiry Date, Renewal Date<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;</span>
+                <span class="reporter-method-output">&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_10567 [Default test]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 17 Oct 10:59:16 506 - Page URL:: data:,</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 17 Oct 10:59:16 507 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 17 Oct 10:59:17 221 - Page URL:: http://ald-edgesrv:8091/selfservice/index.html?domain=eisbroker.siriusfs.com</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 17 Oct 10:59:17 223 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">22 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.pure.HouseHold.Sprint_02</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TC_054</span>
+                <br/>
+                <span class="ignored-method-name">TC_010</span>
+                <br/>
+                <span class="ignored-method-name">TC_055</span>
+                <br/>
+                <span class="ignored-method-name">TC_011</span>
+                <br/>
+                <span class="ignored-method-name">TC_009</span>
+                <br/>
+                <span class="ignored-method-name">TC_018</span>
+                <br/>
+                <span class="ignored-method-name">TC_007</span>
+                <br/>
+                <span class="ignored-method-name">TC_008</span>
+                <br/>
+                <span class="ignored-method-name">TC_016</span>
+                <br/>
+                <span class="ignored-method-name">TC_005</span>
+                <br/>
+                <span class="ignored-method-name">TC_017</span>
+                <br/>
+                <span class="ignored-method-name">TC_058</span>
+                <br/>
+                <span class="ignored-method-name">TC_003</span>
+                <br/>
+                <span class="ignored-method-name">TC_014</span>
+                <br/>
+                <span class="ignored-method-name">TC_015</span>
+                <br/>
+                <span class="ignored-method-name">TC_004</span>
+                <br/>
+                <span class="ignored-method-name">TC_001</span>
+                <br/>
+                <span class="ignored-method-name">TC_056</span>
+                <br/>
+                <span class="ignored-method-name">TC_012</span>
+                <br/>
+                <span class="ignored-method-name">TC_002</span>
+                <br/>
+                <span class="ignored-method-name">TC_057</span>
+                <br/>
+                <span class="ignored-method-name">TC_013</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pure.HouseHold.Sprint_02</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">init(org.testng.TestRunner@5fa07e12)</span>
+                <span class="method-start">256 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_006((Browser: chrome, Hub: aspirehyd119, Node: ), chrome_XP)</span>
+                <span class="method-start">3846 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">22364 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
