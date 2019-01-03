@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [PureBroker_Smoke]" parallel="methods">
+  <parameter name="webSite" value="http://ald-edgesrv:8091/EIS-SSC"/>
+  <parameter name="deviceHost" value="localhost"/>
+  <parameter name="os" value="Windows"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="os_version" value="7"/>
+  <parameter name="devicePort" value="8085"/>
+  <parameter name="browserName" value="chrome_windows"/>
+  <parameter name="browser_version" value="62"/>
+  <parameter name="env" value="Staging"/>
+  <parameter name="securityTest" value="false"/>
+  <test thread-count="5" verbose="3" name="UXP_Sprint_02(failed)" parallel="methods">
+    <classes>
+      <class name="com.pure.HouseHold.Smoke_Pack">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="init"/>
+          <include name="TC_001" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.pure.HouseHold.Smoke_Pack -->
+    </classes>
+  </test> <!-- UXP_Sprint_02(failed) -->
+</suite> <!-- Failed suite [PureBroker_Smoke] -->

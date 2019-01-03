@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="PureBroker_Smoke" verbose="3" parallel="true">
+	<parameter name="securityTest" value="false" />
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="8085" />
+	<parameter name="browserName" value="chrome_windows"></parameter>
+	
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="browser_version" value="62"></parameter>
+	<parameter name="os" value="Windows"></parameter>
+	<parameter name="os_version" value="7"></parameter>
+    <parameter name="env" value="Staging"></parameter>
+    <parameter name="webSite" value="http://ald-edgesrv:8091/EIS-SSC"></parameter>
+        
+  	<test name="UXP_Sprint_02" parallel="true" thread-count="2">
+		<classes>
+			<class name="com.pure.HouseHold.Smoke_Pack">
+			<methods><include name="TC_001"/></methods></class>
+			</classes>
+	</test>
+	
+	<!-- <test name="UXP_Sprint_03" parallel="true" thread-count="2">
+		<classes>
+			<class name="com.pure.HouseHold.Sprint_03"/>
+			</classes>
+	</test> -->
+	
+</suite>
