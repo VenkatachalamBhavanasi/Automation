@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="97005" started-at="2018-01-29T06:33:40Z" finished-at="2018-01-29T06:35:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="97005" started-at="2018-01-29T06:33:40Z" finished-at="2018-01-29T06:35:17Z">
+      <class name="testcases.TC001_LoginLogOut">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="beforeSuite" is-config="true" duration-ms="455" started-at="2018-01-29T12:03:40Z" finished-at="2018-01-29T12:03:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-01-29T12:03:40Z" finished-at="2018-01-29T12:03:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="setData()[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="setData" is-config="true" duration-ms="38657" started-at="2018-01-29T12:03:40Z" finished-at="2018-01-29T12:04:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setData -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="beforeMethod" is-config="true" duration-ms="9450" started-at="2018-01-29T12:04:24Z" finished-at="2018-01-29T12:04:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="logInLogOut(java.lang.String, java.lang.String)[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="logInLogOut" duration-ms="18297" started-at="2018-01-29T12:04:34Z" data-provider="fetchData" finished-at="2018-01-29T12:04:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DemoSalesManager]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInLogOut -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="afterMethod" is-config="true" duration-ms="867" started-at="2018-01-29T12:04:52Z" finished-at="2018-01-29T12:04:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="beforeMethod" is-config="true" duration-ms="8330" started-at="2018-01-29T12:04:53Z" finished-at="2018-01-29T12:05:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="logInLogOut(java.lang.String, java.lang.String)[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="logInLogOut" duration-ms="15009" started-at="2018-01-29T12:05:01Z" data-provider="fetchData" finished-at="2018-01-29T12:05:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DemoCSR]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInLogOut -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="afterMethod" is-config="true" duration-ms="778" started-at="2018-01-29T12:05:16Z" finished-at="2018-01-29T12:05:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-01-29T12:05:17Z" finished-at="2018-01-29T12:05:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC001_LoginLogOut@dec4a]" name="afterSuite" is-config="true" duration-ms="410" started-at="2018-01-29T12:05:17Z" finished-at="2018-01-29T12:05:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testcases.TC001_LoginLogOut -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
