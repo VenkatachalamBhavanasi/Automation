@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Nupela]" parallel="classes">
+  <test name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="tests.TC004_EditLead">
+        <methods>
+          <include name="setValues"/>
+          <include name="beforeMethod"/>
+          <include name="launchApp"/>
+          <include name="runEditLead" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- tests.TC004_EditLead -->
+      <class name="tests.TC005_DuplicateLead">
+        <methods>
+          <include name="runDupsLead" invocation-numbers="0 1"/>
+          <include name="beforeMethod"/>
+          <include name="launchApp"/>
+          <include name="setValues"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- tests.TC005_DuplicateLead -->
+      <class name="tests.TC001_CreateLead">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="launchApp"/>
+          <include name="setValues"/>
+          <include name="beforeSuite"/>
+          <include name="runCreateLead" invocation-numbers="0 1"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- tests.TC001_CreateLead -->
+      <class name="tests.TC003_MergeLead">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="launchApp"/>
+          <include name="runMergeLead" invocation-numbers="1 0"/>
+          <include name="beforeSuite"/>
+          <include name="setValues"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- tests.TC003_MergeLead -->
+      <class name="tests.TC002_DeleteLead">
+        <methods>
+          <include name="setValues"/>
+          <include name="beforeMethod"/>
+          <include name="launchApp"/>
+          <include name="beforeSuite"/>
+          <include name="runDeleteLead"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- tests.TC002_DeleteLead -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Nupela] -->
