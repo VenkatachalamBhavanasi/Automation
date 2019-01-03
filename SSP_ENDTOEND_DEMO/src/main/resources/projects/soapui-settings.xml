@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-settings xmlns:con="http://eviware.com/soapui/config">
+<con:setting id="ProxySettings@host">192.168.5.100</con:setting>
+<con:setting id="ProxySettings@port">3128</con:setting>
+<con:setting id="ProxySettings@enableProxy">false</con:setting>
+<con:setting id="HttpSettings@response-compression">false</con:setting>
+<con:setting id="HttpSettings@disable_response_decompression">false</con:setting>
+</con:soapui-settings> 

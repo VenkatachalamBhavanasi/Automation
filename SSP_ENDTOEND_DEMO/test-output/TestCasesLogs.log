@@ -1,0 +1,151 @@
+10-Aug-2018 11:02:33:511 INFO  [DataUtils] data utils base path: E:\hood-local\UIAutomation\src\main\resources\testdata\ 
+10-Aug-2018 11:02:33:883 INFO  [DataUtils] data utils base path: E:\hood-local\UIAutomation\src\main\resources\testdata\ 
+10-Aug-2018 11:02:33:927 INFO  [TestNG-PoolService-0]  
+10-Aug-2018 11:02:33:927 INFO  [TestNG-PoolService-0] ****             Create 3* annual in WJ - Store customer details in CustomerInfo desktop application - Verifying policy details in Self-service - Enabling credentials through SoapUI - Performing MTA to add additonal cover<small><b><i>[chrome_windows]</b></i></small>             ***** 
+10-Aug-2018 11:02:33:927 INFO  [TestNG-PoolService-0]  
+10-Aug-2018 11:02:33:928 INFO  [TestNG-PoolService-0]  
+10-Aug-2018 11:02:33:928 INFO  [TestNG-PoolService-0] ****             TC_01 [UXP_SS]             ***** 
+10-Aug-2018 11:02:33:928 INFO  [TestNG-PoolService-0]  
+10-Aug-2018 11:02:33:958 INFO  [TestNG-PoolService-0] ****             -E---N---D-             ***** 
+10-Aug-2018 11:02:39:397 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: input.input-md[type='text'][name='HOMEINSURANCE[1].YOURDETAILS[1].HOME[1].ADDRESS[1].POSTCODE']] 
+10-Aug-2018 11:02:39:397 INFO  [TestNG-PoolService-0] Navigated to Get Quote Page successfully!! 
+10-Aug-2018 11:02:39:645 DEBUG [TestNG-PoolService-0] Entered the PostCode: GU111PZ 
+10-Aug-2018 11:02:48:276 DEBUG [TestNG-PoolService-0] Clicked on Find Address 
+10-Aug-2018 11:02:48:277 INFO  [TestNG-PoolService-0] Entered address of the customer with postcode : GU111PZ 
+10-Aug-2018 11:02:48:408 DEBUG [TestNG-PoolService-0] Selected Property Type :Buildings and Contents 
+10-Aug-2018 11:02:48:409 INFO  [TestNG-PoolService-0] Selected Cover Type : Buildings and Contents 
+10-Aug-2018 11:02:48:711 DEBUG [TestNG-PoolService-0] Entered the yearOfBuild: 2001 
+10-Aug-2018 11:02:48:711 INFO  [TestNG-PoolService-0] Entered year of Build : 2001 
+10-Aug-2018 11:02:48:937 DEBUG [TestNG-PoolService-0] Selected Number of Bedrooms :2 
+10-Aug-2018 11:02:48:937 INFO  [TestNG-PoolService-0] Selected number of Bedrooms : 2 
+10-Aug-2018 11:02:49:148 DEBUG [TestNG-PoolService-0] Selected Property Type :Detached House 
+10-Aug-2018 11:02:49:148 INFO  [TestNG-PoolService-0] Selected number of Bedrooms : Detached House 
+10-Aug-2018 11:02:49:337 DEBUG [TestNG-PoolService-0] Selected Property Type :Mr 
+10-Aug-2018 11:02:49:337 INFO  [TestNG-PoolService-0] Selected title : Mr 
+10-Aug-2018 11:02:49:608 DEBUG [TestNG-PoolService-0] Entered the firstName: Ramesh 
+10-Aug-2018 11:02:49:608 INFO  [TestNG-PoolService-0] Entered first name : Ramesh 
+10-Aug-2018 11:02:50:902 DEBUG [TestNG-PoolService-0] Entered the lastName: Sharma 
+10-Aug-2018 11:02:50:903 INFO  [TestNG-PoolService-0] Entered Last Name :Sharma 
+10-Aug-2018 11:02:52:082 DEBUG [TestNG-PoolService-0] Selected Day: 1 
+10-Aug-2018 11:02:52:326 DEBUG [TestNG-PoolService-0] Selected Day: May 
+10-Aug-2018 11:02:52:700 DEBUG [TestNG-PoolService-0] Selected Day: 1990 
+10-Aug-2018 11:02:52:802 DEBUG [TestNG-PoolService-0] Selected Day :1 
+10-Aug-2018 11:02:52:803 DEBUG [TestNG-PoolService-0] Selected Month :May 
+10-Aug-2018 11:02:52:804 DEBUG [TestNG-PoolService-0] Selected Year :1990 
+10-Aug-2018 11:02:52:804 INFO  [TestNG-PoolService-0] SelectedDate of Birth : 01-May-1990 
+10-Aug-2018 11:02:53:012 DEBUG [TestNG-PoolService-0] Selected Property Type :0 
+10-Aug-2018 11:02:53:012 INFO  [TestNG-PoolService-0] Number of years Building Insurance Held : 0 
+10-Aug-2018 11:02:53:221 DEBUG [TestNG-PoolService-0] Selected Property Type :0 
+10-Aug-2018 11:02:53:221 INFO  [TestNG-PoolService-0] Number of years Content Insurance Held : 0 
+10-Aug-2018 11:02:53:393 DEBUG [TestNG-PoolService-0] Selected Property Type :No 
+10-Aug-2018 11:02:53:393 INFO  [TestNG-PoolService-0] Select Join policy Holder ?No 
+10-Aug-2018 11:02:53:576 DEBUG [TestNG-PoolService-0] Selected Property Type :No 
+10-Aug-2018 11:02:53:576 INFO  [TestNG-PoolService-0] Previous Claims Made ? No 
+10-Aug-2018 11:02:53:774 DEBUG [TestNG-PoolService-0] Selected Property Type :No 
+10-Aug-2018 11:02:53:775 INFO  [TestNG-PoolService-0] Personal Items? No 
+10-Aug-2018 11:02:53:956 DEBUG [TestNG-PoolService-0] Selected Property Type :No 
+10-Aug-2018 11:02:53:956 INFO  [TestNG-PoolService-0] Bicycle?No 
+10-Aug-2018 11:02:54:125 DEBUG [TestNG-PoolService-0] Selected High Risk Type :No 
+10-Aug-2018 11:02:54:125 INFO  [TestNG-PoolService-0] High Risk Items?No 
+10-Aug-2018 11:02:54:290 DEBUG [TestNG-PoolService-0] Selected Property Type :No 
+10-Aug-2018 11:02:54:290 INFO  [TestNG-PoolService-0] Have any promo code?No 
+10-Aug-2018 11:02:56:801 INFO  [TestNG-PoolService-0] Data entered in the Quote Page 
+10-Aug-2018 11:02:57:597 DEBUG [TestNG-PoolService-0] Clicked on Get Quote: 
+10-Aug-2018 11:03:13:784 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: span.quote-number>span] 
+10-Aug-2018 11:03:13:814 INFO  [TestNG-PoolService-0] Details entered and clicked on Get Quote 
+10-Aug-2018 11:03:13:950 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: span.quote-number>span] 
+10-Aug-2018 11:03:14:027 DEBUG [TestNG-PoolService-0] Quote Number - 6824002, One Off Payment : £214.94, Monthly Payment : £19.61 
+10-Aug-2018 11:03:15:886 INFO  [TestNG-PoolService-0] Clicked on Summary Button 
+10-Aug-2018 11:03:15:995 DEBUG [TestNG-PoolService-0] Clicked on Summary Button 
+10-Aug-2018 11:03:16:100 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: a.action-button.button-lg[title='Forward']] 
+10-Aug-2018 11:03:16:100 INFO  [TestNG-PoolService-0] Navigating to Summary Page 
+10-Aug-2018 11:03:16:869 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: a.action-button.button-lg[title='Forward']] 
+10-Aug-2018 11:03:16:952 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: span.summary-price.js-currency] 
+10-Aug-2018 11:03:16:953 DEBUG [TestNG-PoolService-0] Navigated Successfully to Summary Page 
+10-Aug-2018 11:03:17:025 INFO  [TestNG-PoolService-0] Confirm Agreement Statement 
+10-Aug-2018 11:03:17:025 INFO  [TestNG-PoolService-0] Data entered in Summary Page 
+10-Aug-2018 11:03:17:082 DEBUG [TestNG-PoolService-0] Clicked on Summary Button 
+10-Aug-2018 11:03:18:229 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: input.input-lg[name='HOMEINSURANCE[1].YOURDETAILS[1].ABOUTYOU[1].EMAIL']] 
+10-Aug-2018 11:03:18:266 DEBUG [TestNG-PoolService-0] Page URL:: https://hood-test.ssp-hosting.com/homeinsurance/servletcontroller 
+10-Aug-2018 11:03:18:266 DEBUG [TestNG-PoolService-0] Page Load Wait: (Sync) 
+10-Aug-2018 11:03:18:356 INFO  [TestNG-PoolService-0] Navigating to Payment Page 
+10-Aug-2018 11:03:18:453 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: input.input-lg[name='HOMEINSURANCE[1].YOURDETAILS[1].ABOUTYOU[1].EMAIL']] 
+10-Aug-2018 11:03:18:609 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: input.input-lg[name='HOMEINSURANCE[1].YOURDETAILS[1].ABOUTYOU[1].EMAIL']] 
+10-Aug-2018 11:03:18:609 DEBUG [TestNG-PoolService-0] Navigated Successfully to Payment Page 
+10-Aug-2018 11:03:18:609 INFO  [TestNG-PoolService-0] Navigated to Payment Page 
+10-Aug-2018 11:03:20:048 DEBUG [TestNG-PoolService-0] Entered the Email: ramesh.sharma@hguat.com 
+10-Aug-2018 11:03:20:048 INFO  [TestNG-PoolService-0] Entering Email Address:ramesh.sharma@hguat.com 
+10-Aug-2018 11:03:21:484 DEBUG [TestNG-PoolService-0] Entered the ConfirmEmail: ramesh.sharma@hguat.com 
+10-Aug-2018 11:03:21:485 INFO  [TestNG-PoolService-0] Confirming Email Address: ramesh.sharma@hguat.com 
+10-Aug-2018 11:03:21:893 DEBUG [TestNG-PoolService-0] Entered the Phone: 07328554450 
+10-Aug-2018 11:03:21:894 INFO  [TestNG-PoolService-0] Entering Phone number :07328554450 
+10-Aug-2018 11:03:22:038 DEBUG [TestNG-PoolService-0] Selected Payment Method :Annual 
+10-Aug-2018 11:03:22:039 INFO  [TestNG-PoolService-0] Selected Payment MethodAnnual 
+10-Aug-2018 11:03:22:242 DEBUG [TestNG-PoolService-0] Selected Billing Address :No 
+10-Aug-2018 11:03:22:242 INFO  [TestNG-PoolService-0] Change Billing Address : No 
+10-Aug-2018 11:03:23:454 INFO  [TestNG-PoolService-0] Clicking on Confirmation Button 
+10-Aug-2018 11:03:24:683 DEBUG [TestNG-PoolService-0] Clicked on Confirmation Button 
+10-Aug-2018 11:03:24:779 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: input[type='password'][name='HOMEINSURANCE[1].SAVEQUOTE[1].PASSWORD']] 
+10-Aug-2018 11:03:24:898 DEBUG [TestNG-PoolService-0] Entered the Password: Passw0rd 
+10-Aug-2018 11:03:25:953 INFO  [TestNG-PoolService-0] Clicking on Signin Button 
+10-Aug-2018 11:03:26:016 DEBUG [TestNG-PoolService-0] Clicked on Summary Button 
+10-Aug-2018 11:03:26:051 DEBUG [TestNG-PoolService-0] Page URL:: https://hood-test.ssp-hosting.com/homeinsurance/servletcontroller 
+10-Aug-2018 11:03:26:051 DEBUG [TestNG-PoolService-0] Page Load Wait: (Sync) 
+10-Aug-2018 11:03:43:279 DEBUG [TestNG-PoolService-0] Navigating to Sage Pay  Page 
+10-Aug-2018 11:03:43:461 DEBUG [TestNG-PoolService-0] Clicked on Visa 
+10-Aug-2018 11:03:44:138 DEBUG [TestNG-PoolService-0] Catched spinner load exception or Spinner is taking lot of time 
+10-Aug-2018 11:03:44:139 DEBUG [TestNG-PoolService-0] Spinner Load Wait: (Sync) 
+10-Aug-2018 11:03:44:673 DEBUG [TestNG-PoolService-0] Page URL:: https://hood-test.ssp-hosting.com/homeinsurance/servletcontroller 
+10-Aug-2018 11:03:44:673 DEBUG [TestNG-PoolService-0] Page Load Wait: (Sync) 
+10-Aug-2018 11:03:44:679 INFO  [TestNG-PoolService-0] Navigating to Sage Pay Page 
+10-Aug-2018 11:03:44:762 DEBUG [TestNG-PoolService-0] Entered Card Details 
+10-Aug-2018 11:03:44:762 INFO  [TestNG-PoolService-0] Entering Card Number : 4929000000006 
+10-Aug-2018 11:03:44:820 DEBUG [TestNG-PoolService-0] Entering Expiry Month 
+10-Aug-2018 11:03:44:820 INFO  [TestNG-PoolService-0] Selecting Expiry Month : 8 
+10-Aug-2018 11:03:44:879 DEBUG [TestNG-PoolService-0] Entering Expiry Year 
+10-Aug-2018 11:03:44:880 INFO  [TestNG-PoolService-0] Selecting Expiry Year : 19 
+10-Aug-2018 11:03:44:975 DEBUG [TestNG-PoolService-0] Entering Security Code 
+10-Aug-2018 11:03:44:976 INFO  [TestNG-PoolService-0] Selecting Expiry Year : 234 
+10-Aug-2018 11:03:45:475 INFO  [TestNG-PoolService-0] Data Entered in Sagepay page 
+10-Aug-2018 11:03:45:536 DEBUG [TestNG-PoolService-0] Clicked on Proceed button 
+10-Aug-2018 11:03:45:545 INFO  [TestNG-PoolService-0] Navigate to SagePay Confirmation Page 
+10-Aug-2018 11:03:45:546 DEBUG [TestNG-PoolService-0] Navigated Successfully to AnnualPayment Page 
+10-Aug-2018 11:03:45:546 DEBUG [TestNG-PoolService-0] Navigating to Payment confirmation Page 
+10-Aug-2018 11:03:46:245 DEBUG [TestNG-PoolService-0] Catched spinner load exception or Spinner is taking lot of time 
+10-Aug-2018 11:03:46:245 DEBUG [TestNG-PoolService-0] Spinner Load Wait: (Sync) 
+10-Aug-2018 11:03:47:162 DEBUG [TestNG-PoolService-0] Catched spinner load exception or Spinner is taking lot of time 
+10-Aug-2018 11:03:47:163 DEBUG [TestNG-PoolService-0] Spinner Load Wait: (Sync) 
+10-Aug-2018 11:03:57:457 DEBUG [TestNG-PoolService-0] Unable to find a element after[[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: h3.quote-summary#HEAD_398053B6E2189E741873] 
+10-Aug-2018 11:03:57:490 INFO  [TestNG-PoolService-0] Navigating to Thank You Page 
+10-Aug-2018 11:03:57:560 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: h3.quote-summary#HEAD_398053B6E2189E741873] 
+10-Aug-2018 11:03:57:642 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: div>span.quote-number] 
+10-Aug-2018 11:03:57:642 DEBUG [TestNG-PoolService-0] Navigated Successfully to ThankYou Page 
+10-Aug-2018 11:03:58:365 INFO  [TestNG-PoolService-0] Created Quote Successfully, HD-ASD-6824002 
+10-Aug-2018 11:03:58:366 INFO  [TestNG-PoolService-0] Calling AutoIt scripts !!! 
+10-Aug-2018 11:03:58:398 INFO  [TestNG-PoolService-0] Storing customer data in to Desktop applicatin using AutoIt scripts 
+10-Aug-2018 11:03:58:439 INFO  [TestNG-PoolService-0] customer details entered succesfully in to Desktop applicatin using AutoIt scripts 
+10-Aug-2018 11:04:03:959 DEBUG [TestNG-PoolService-0] Page URL:: https://hood-test.ssp-hosting.com/siaas-ssc/servletcontroller 
+10-Aug-2018 11:04:03:960 DEBUG [TestNG-PoolService-0] Page Load Wait: (Sync) 
+10-Aug-2018 11:04:04:069 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: button#BUT_E14D31D21EBB8E7F24944] 
+10-Aug-2018 11:04:04:075 INFO  [TestNG-PoolService-0] Self Service Home Page Loaded successfully!! 
+10-Aug-2018 11:04:04:148 INFO  [TestNG-PoolService-0] Clicked on SignIn Link!! 
+10-Aug-2018 11:04:05:839 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: input#email_address] 
+10-Aug-2018 11:04:05:929 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: button#sign_in] 
+10-Aug-2018 11:04:05:951 INFO  [TestNG-PoolService-0] Navigated to Login Page Successfully!! 
+10-Aug-2018 11:04:06:135 DEBUG [TestNG-PoolService-0] Entered the Email ID: ramesh.sharma@hguat.com 
+10-Aug-2018 11:04:06:135 INFO  [TestNG-PoolService-0] Entered Email id :ramesh.sharma@hguat.com 
+10-Aug-2018 11:04:06:235 DEBUG [TestNG-PoolService-0] Entered the Email ID: Passw0rd 
+10-Aug-2018 11:04:06:235 INFO  [TestNG-PoolService-0] Entered Password: Passw0rd 
+10-Aug-2018 11:04:11:359 DEBUG [TestNG-PoolService-0] Clicked on Sign In Button 
+10-Aug-2018 11:04:51:454 DEBUG [TestNG-PoolService-0] Unable to find a element after[[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: h2.page-title] 
+10-Aug-2018 11:04:59:866 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: a[data-toggle='dropdown']] 
+10-Aug-2018 11:04:59:917 INFO  [TestNG-PoolService-0] Logged into Self Service Application and Verified Name of the customer! 
+10-Aug-2018 11:04:59:979 INFO  [TestNG-PoolService-0] The recently created policy annual does exist in the Customer Dashboard 
+10-Aug-2018 11:05:00:208 DEBUG [TestNG-PoolService-0] Clicked on New Quote 
+10-Aug-2018 11:05:07:062 DEBUG [TestNG-PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (10972fdb1a1af20c0065aeead329743c)] -> css selector: input.input-md[type='text'][name='HOMEINSURANCE[1].YOURDETAILS[1].HOME[1].ADDRESS[1].POSTCODE']] 
+10-Aug-2018 11:05:07:062 INFO  [TestNG-PoolService-0] Navigated to your details page successfully 
+10-Aug-2018 11:05:07:084 DEBUG [TestNG-PoolService-0] First Name verified successfully 
+10-Aug-2018 11:05:07:111 DEBUG [TestNG-PoolService-0] Last Name verified successfully 
+10-Aug-2018 11:05:07:111 DEBUG [TestNG-PoolService-0] Customer Details Verified Successfully 
+10-Aug-2018 11:05:08:908 INFO  [TestNG-PoolService-0] Created annual policy in WJ and Verified the presence on SS in detail successfully 
+10-Aug-2018 11:05:08:911 INFO  [TestNG-PoolService-0] Calling SOAP services 

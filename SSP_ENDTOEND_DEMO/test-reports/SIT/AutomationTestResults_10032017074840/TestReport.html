@@ -1,0 +1,4050 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+ExtentReports Library 2.40.2 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
+Copyright (c) 2015, Anshoo Arora (Relevant Codes) | Copyrights licensed under the New BSD License | http://opensource.org/licenses/BSD-3-Clause
+Documentation: http://extentreports.relevantcodes.com 
+-->
+
+<meta charset='UTF-8' /> 
+<meta name='description' content='ExtentReports (by Anshoo Arora) is a reporting library for automation testing for .NET and Java. It creates detailed and beautiful HTML reports for modern browsers. ExtentReports shows test and step summary along with dashboards, system and environment details for quick analysis of your tests.' />
+<meta name='robots' content='noodp, noydir' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+<title>
+ExtentReports 2.0
+</title>
+
+
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+<link href='https://cdn.rawgit.com/anshooarora/extentreports/e4f8ea1de961161791c01b99a71a1e17f81125cf/cdn/extent.css' type='text/css' rel='stylesheet' />
+
+<style>
+
+            
+                
+            
+        
+</style>
+</head>
+
+
+<body class='extent standard hide-overflow'>
+<!-- nav -->
+<nav>
+<div class='logo-container'>
+<a class='logo-content' href='http://extentreports.relevantcodes.com'>
+<span>ExtentReports</span>
+</a>
+<a href='#' data-activates='slide-out' class='button-collapse hide-on-large-only'><i class='mdi-navigation-apps'></i></a>
+</div>
+<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+<li class='analysis waves-effect'><a href='#!' class='categories-view' onclick="_updateCurrentStage(1)"><i class='mdi-maps-local-offer'></i>Categories</a></li>
+<li class='analysis waves-effect'><a href='#!' class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a></li>
+</ul>
+<span class='report-name'>Automation Report</span> <span class='report-headline'></span>
+<ul class='right hide-on-med-and-down nav-right'>
+<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
+<i class='mdi-hardware-desktop-windows'></i>
+</li>
+<li>
+<span class='suite-started-time'>2017-03-10 19:48:39</span>
+</li>
+<li>
+<span>v2.40.2</span>
+</li>
+</ul>
+</nav>
+<!-- /nav -->
+
+<!-- container -->
+<div class='container'>
+
+<!-- dashboard -->
+<div id='dashboard-view' class='row'>
+<div class='time-totals'>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-tests'> 
+<span class='panel-name'>Total Tests</span> 
+<span class='total-tests'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-steps'> 
+<span class='panel-name'>Total Steps</span> 
+<span class='total-steps'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-current'> 
+<span class='panel-name'>Total Time Taken (Current Run)</span> 
+<span class='suite-total-time-current-value panel-lead'>2h 0m 34s+310ms</span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-overall'> 
+<span class='panel-name'>Total Time Taken (Overall)</span> 
+<span class='suite-total-time-overall-value panel-lead'>2h 0m 34s+310ms</span> 
+</div> 
+</div>
+<div class='col l2 m4 s6 suite-start-time'>
+<div class='card accent green-accent'> 
+<span class='panel-name'>Start</span> 
+<span class='panel-lead suite-started-time'>2017-03-10 17:48:05</span> 
+</div> 
+</div>
+<div class='col l2 m4 s6 suite-end-time'>
+<div class='card accent pink-accent'> 
+<span class='panel-name'>End</span> 
+<span class='panel-lead suite-ended-time'>2017-03-10 19:48:39</span> 
+</div> 
+</div>
+</div>
+<div class='charts'>
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Tests View</span>
+</div> 
+<div class='panel-setting modal-trigger test-count-setting right'>
+<a href='#test-count-setting'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='test-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='t-pass-count weight-normal'></span> test(s) passed</span>
+</div> 
+<div>
+<span class='weight-light'><span class='t-fail-count weight-normal'></span> test(s) failed, <span class='t-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div> 
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Steps View</span>
+</div> 
+<div class='panel-setting modal-trigger step-status-filter right'>
+<a href='#step-status-filter'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='step-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='s-pass-count weight-normal'></span> step(s) passed </span>
+</div> 
+<div>
+<span class='weight-light'><span class='s-fail-count weight-normal'></span> step(s) failed, <span class='s-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div>
+<div class='col s12 m12 l4 fh'> 
+<div class='card-panel'> 
+<span class='panel-name'>Pass Percentage</span> 
+<span class='pass-percentage panel-lead'></span> 
+<div class='progress light-blue lighten-3'> 
+<div class='determinate light-blue'></div> 
+</div> 
+</div> 
+</div>
+</div>
+<div class='system-view'>
+<div class='col l4 m12 s12'>
+<div class='card-panel'>
+<span class='label info outline right'>Environment</span>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 7</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>priya.sekhar</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>1.8.0_45</td>
+</tr>
+<tr>
+<td>Host Name</td>
+<td>ASPIRE1184</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class='category-summary-view'>
+<div class='col l4 m6 s12'>
+<div class='card-panel'>
+<span class='label info outline right'>Categories</span>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+SSP_SmokeTest
+</td>
+</tr>
+<tr>
+<td>
+UXP_CC
+</td>
+</tr>
+<tr>
+<td>
+UXP_SS
+</td>
+</tr>
+<tr>
+<td>
+UXP_WJ
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- /dashboard -->
+
+<!-- tests -->
+<div id='test-view' class='row _addedTable'>
+<div class='col _addedCell1'>
+<div class='contents'>
+<div class='card-panel heading'>
+<h5>Tests</h5>
+</div>
+<div class='card-panel filters'>
+<div>
+<a data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#' class='dropdown-button button tests-toggle'><i class='mdi-action-subject icon'></i></a>
+<ul id='tests-toggle' class='dropdown-content'>
+<li class='pass'><a href='#!'>Pass</a></li>
+<li class='fail'><a href='#!'>Fail</a></li>
+<li class='skip'><a href='#!'>Skip</a></li>
+<li class='divider'></li>
+<li class='clear'><a href='#!'>Clear Filters</a></li>
+</ul>
+</div>
+<div>
+<a data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#' class='category-toggle dropdown-button button'><i class='mdi-maps-local-offer icon'></i></a>
+<ul id='category-toggle' class='dropdown-content'>
+<li class='SSP_SmokeTest'><a href='#!'>SSP_SmokeTest</a></li>
+<li class='UXP_CC'><a href='#!'>UXP_CC</a></li>
+<li class='UXP_SS'><a href='#!'>UXP_SS</a></li>
+<li class='UXP_WJ'><a href='#!'>UXP_WJ</a></li>
+<li class='divider'></li>
+<li class='clear'><a href='#!'>Clear Filters</a></li>
+</ul>
+</div>
+<div>
+<a id='clear-filters' alt='Clear Filters' title='Clear Filters'><i class='mdi-navigation-close icon'></i></a>
+</div>
+<div>&nbsp;&middot;&nbsp;</div>
+<div>
+<a id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'><i class='mdi-action-track-changes icon'></i></a>
+</div>
+<div>
+<a id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters' class='enabled'><i class='mdi-navigation-refresh icon'></i></i></a>
+</div>
+<div>&nbsp;&middot;</div>
+<div class='search' alt='Search Tests' title='Search Tests'>
+<div class='input-field left'>
+<input id='searchTests' type='text' class='validate' placeholder='Search Tests...'>
+</div>
+<i class='mdi-action-search icon'></i>
+</div>
+</div>
+<div class='card-panel no-padding-h no-padding-v no-margin-v'>
+<div class='wrapper'>
+<ul id='test-collection' class='test-collection'>
+<li class='collection-item test displayed active fail ' extentid='f795c530-cad2-453e-aebf-af7455e5d0e6'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC001 - Create NewBusiness 3* Policy - Annual Payment and search the created NB policy through normal policy search [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 17:48:10</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 17:56:35</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 8m 25s+78ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC001 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:48:48</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC001_UXP_CC_1.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:49:16</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:49:16</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:49:34</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:50:13</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC001_UXP_CC_6.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:50:14</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC001_UXP_CC_7.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:50:28</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:50:28</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC001_UXP_CC_10.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:50:40</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:50:41</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:50:41</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:50:41</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:50:44</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:50:44</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC001_UXP_CC_11.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:51:55</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC001_UXP_CC_12.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:52:32</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC001_UXP_CC_13.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:52:33</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:33</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:33</td>
+<td class='step-details'>Cover Chosen:Buildings and Contents</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:33</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:33</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:33</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:52:33</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC001_UXP_CC_16.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:33</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:50</td>
+<td class='step-details'>Entering customer details forBuildings and Contents corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:51</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:55</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:55</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:52:56</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:53:24</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>17:56:35</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC001_UXP_CC_17.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='65cfaf27-39df-404a-9836-031c18ada980'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC002 - VerifyAdvanced search through Make call functionality [W7_chrome52] </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 17:56:40</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 17:59:46</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 3m 6s+380ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC002 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:57:16</td>
+<td class='step-details'>Step-1: UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC002_UXP_CC_18.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:57:44</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:58:04</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:58:05</td>
+<td class='step-details'>Entered the Last Name: CCTestOne</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:58:05</td>
+<td class='step-details'>Entered the first Name: Automation</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:58:05</td>
+<td class='step-details'>Clicked on Search button:</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:58:05</td>
+<td class='step-details'>Searching with the last name : CCTestOne</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:58:14</td>
+<td class='step-details'>Has the expected search result</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:58:32</td>
+<td class='step-details'>Selected Policy is :<img class='report-img' data-featherlight='file:///E:\SSP QA\Latest Framework\New folder\Hood_SmokeSuite\target\surefire-reports\ScreenShot\tcHoodCC002_UXP_CC_23.png' src='file:///E:\SSP QA\Latest Framework\New folder\Hood_SmokeSuite\target\surefire-reports\ScreenShot\tcHoodCC002_UXP_CC_23.png' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:59:20</td>
+<td class='step-details'>Customer Dashboard Page is loaded properly</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>17:59:34</td>
+<td class='step-details'>Clicked on Passed Verification</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>17:59:46</td>
+<td class='step-details'>Verified Searched FirstName and LastName on Customer Dashboard</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='a54a61df-4b52-4460-bb24-c08010cee3f3'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC003 - Create NewBusiness 3*  Policy - PCL Payment  [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 17:59:51</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 18:08:16</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 8m 24s+932ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC003 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:00:26</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC003_UXP_CC_28.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:00:54</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:00:54</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:01:11</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:01:50</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC003_UXP_CC_33.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:01:50</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC003_UXP_CC_34.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:02:10</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:02:10</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC003_UXP_CC_37.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:02:22</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:02:23</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:02:23</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:02:23</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:02:26</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:02:26</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC003_UXP_CC_38.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:03:37</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC003_UXP_CC_39.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:04:14</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC003_UXP_CC_40.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:04:15</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:15</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:15</td>
+<td class='step-details'>Cover Chosen:Buildings</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:15</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:15</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:15</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:04:15</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC003_UXP_CC_43.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:15</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:32</td>
+<td class='step-details'>Entering customer details forBuildings corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:32</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:36</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:37</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:04:37</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:05:04</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>18:08:16</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC003_UXP_CC_44.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='5ddaf27f-f4a9-4716-a6e4-c85405c57e68'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC004 - Create New Business 5* Policy - PCL Payment -  validate 3 monthly documents [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 18:08:20</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 18:17:33</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 9m 12s+663ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC004 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:08:56</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_45.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:09:24</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:09:24</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:09:42</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:10:20</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_50.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:10:21</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_51.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:10:35</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:10:36</td>
+<td class='step-details'>Verified Searched FirstName and LastName on Customer Dashboard</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:10:36</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_56.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:10:48</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:10:48</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:10:49</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:10:49</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:10:52</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:10:52</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_57.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:12:03</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_58.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:12:40</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_59.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:12:40</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:12:40</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:12:40</td>
+<td class='step-details'>Cover Chosen:Buildings</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:12:41</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:12:41</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:12:41</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:12:41</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_62.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:12:41</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:12:57</td>
+<td class='step-details'>Entering customer details forBuildings corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:12:58</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:13:02</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:13:02</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:13:03</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:13:29</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:13:48</td>
+<td class='step-details'>Add Home Emergency_BC cover type done successfully&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_63.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:14:00</td>
+<td class='step-details'>Clicked on Upgrade now</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:14:33</td>
+<td class='step-details'>Clicked on Re-Calculate after upgrading policy</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>18:17:33</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC004_UXP_CC_64.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='11406324-008f-4f6c-b26b-d8bc59ef5178'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC005 - Create New Business 5* Policy - Annual Payment  [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 18:17:36</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 18:26:59</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 9m 22s+755ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC005 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:18:13</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_65.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:18:43</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:18:43</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:19:02</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:19:42</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_70.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:19:42</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_71.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:19:55</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:19:56</td>
+<td class='step-details'>Verified Searched FirstName and LastName on Customer Dashboard</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:19:56</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_76.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:20:08</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:20:09</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:20:09</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:20:09</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:20:12</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:20:12</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_77.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:21:23</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_78.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:22:00</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_79.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:22:00</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:00</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:00</td>
+<td class='step-details'>Cover Chosen:Buildings</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:01</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:01</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:01</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:22:01</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_82.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:01</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:17</td>
+<td class='step-details'>Entering customer details forBuildings corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:18</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:22</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:23</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:24</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:22:51</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:23:16</td>
+<td class='step-details'>clicked on home emergency add button&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_83.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:23:27</td>
+<td class='step-details'>Clicked on Upgrade now</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:23:59</td>
+<td class='step-details'>Clicked on Re-Calculate after upgrading policy</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>18:26:59</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC005_UXP_CC_84.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='f7d1f71d-b739-4cc6-a3a1-b2f8d4ef36e2'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC006 - Create New Policy - Annual Payment  and  Verify Document Generation  [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 18:27:04</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 18:36:27</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 9m 23s+567ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC006 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:27:41</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_85.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:28:09</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:28:09</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:28:30</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:29:08</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_90.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:29:08</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_91.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:29:24</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:29:25</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_94.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:29:37</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:29:38</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:29:38</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:29:38</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:29:41</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:29:41</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_95.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:30:52</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_96.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:31:29</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_97.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:31:29</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:29</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:30</td>
+<td class='step-details'>Cover Chosen:Buildings</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:30</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:30</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:30</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:31:30</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_100.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:30</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:46</td>
+<td class='step-details'>Entering customer details forBuildings corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:47</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:50</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:51</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:31:51</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:32:19</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:32:44</td>
+<td class='step-details'>clicked on home emergency add button&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_101.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:32:55</td>
+<td class='step-details'>Clicked on Upgrade now</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:33:27</td>
+<td class='step-details'>Clicked on Re-Calculate after upgrading policy</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>18:36:27</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC006_UXP_CC_102.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='4022d876-dbaa-44ce-b31f-cea4ab3b162a'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC007 - Create NewBusiness Policy - PCL Payment and verfiy document  Generation [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 18:36:31</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 18:45:07</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 8m 35s+713ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC007 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:37:16</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC007_UXP_CC_103.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:37:44</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:37:44</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:38:05</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:38:44</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC007_UXP_CC_108.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:38:44</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC007_UXP_CC_109.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:38:59</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:39:00</td>
+<td class='step-details'>Verified Searched FirstName and LastName on Customer Dashboard</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:39:00</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC007_UXP_CC_114.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:39:12</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:39:12</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:39:13</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:39:13</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:39:16</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:39:16</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC007_UXP_CC_115.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:40:27</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC007_UXP_CC_116.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:41:04</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC007_UXP_CC_117.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:41:04</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:04</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:04</td>
+<td class='step-details'>Cover Chosen:Contents</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:05</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:05</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:05</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:41:05</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC007_UXP_CC_120.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:05</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:21</td>
+<td class='step-details'>Entering customer details forContents corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:22</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:26</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:27</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:28</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:41:55</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>18:45:07</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC007_UXP_CC_121.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='9bae3c25-bf22-46c6-808f-ef6639ce6553'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC008 - Create New Policy-Annual payment - 5 Star Policy -Cancellation and reinstatement [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 18:45:12</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 18:54:53</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 9m 41s+575ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC008 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:45:58</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_122.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:46:28</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:46:28</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:46:49</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:47:27</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_127.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:47:27</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_128.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:47:44</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:47:44</td>
+<td class='step-details'>Verified Searched FirstName and LastName on Customer Dashboard</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:47:44</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_133.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:47:57</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:47:57</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:47:57</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:47:57</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:48:01</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:48:01</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_134.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:49:11</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_135.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:49:48</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_136.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:49:49</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:49:49</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:49:49</td>
+<td class='step-details'>Cover Chosen:Buildings</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:49:49</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:49:49</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:49:49</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:49:49</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_139.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:49:49</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:50:06</td>
+<td class='step-details'>Entering customer details forBuildings corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:50:06</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:50:09</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:50:10</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:50:11</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:50:41</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:51:10</td>
+<td class='step-details'>clicked on home emergency add button&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_140.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:51:22</td>
+<td class='step-details'>Clicked on Upgrade now</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:51:53</td>
+<td class='step-details'>Clicked on Re-Calculate after upgrading policy</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>18:54:53</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC008_UXP_CC_141.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='3892aabe-ffd5-43d3-bdce-b7ffc70fbf3a'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC009 - Create New Policy-Annual payment - 5 Star Policy -Cancel cooling off and reinstatement [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 18:54:58</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:04:18</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 9m 20s+796ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC009 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:55:34</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_142.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:56:02</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:56:02</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:56:22</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:57:00</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_147.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:57:01</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_148.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:57:15</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:57:16</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_151.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:57:28</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:57:28</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:57:28</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:57:28</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:57:32</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:57:32</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_152.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:58:42</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_153.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:59:20</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_154.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:59:20</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:20</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:20</td>
+<td class='step-details'>Cover Chosen:Buildings</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:20</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:20</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:20</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>18:59:21</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_157.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:21</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:37</td>
+<td class='step-details'>Entering customer details forBuildings corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:38</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:41</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:42</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>18:59:42</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:00:10</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:00:34</td>
+<td class='step-details'>clicked on home emergency add button&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_158.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:00:46</td>
+<td class='step-details'>Clicked on Upgrade now</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:01:18</td>
+<td class='step-details'>Clicked on Re-Calculate after upgrading policy</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:04:18</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC009_UXP_CC_159.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='0d5bd5ed-347a-470e-a2cf-6e93d94d3366'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC010 - Create a NewBusiness Policy - Do MTA by adding Addons to the NB policy [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:04:23</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:14:09</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 9m 46s+162ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC010 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:04:58</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_160.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:05:26</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:05:26</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:05:47</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:06:25</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_165.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:06:25</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_166.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:06:43</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:06:44</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_169.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:06:56</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:06:56</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:06:56</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:06:56</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:07:05</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:07:05</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_170.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:08:15</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_171.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:08:52</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_172.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:08:53</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:08:53</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:08:53</td>
+<td class='step-details'>Cover Chosen:Buildings and Contents</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:08:53</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:08:53</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:08:53</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:08:53</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_175.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:08:53</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:09:11</td>
+<td class='step-details'>Entering customer details forBuildings and Contents corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:09:12</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:09:40</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:09:41</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:09:41</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:10:22</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:10:45</td>
+<td class='step-details'>New quote Page has the default values as expected for BLDcover :BLD Cover : LimitAmt = £400000, ExecessAmt =£200&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_176.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:10:57</td>
+<td class='step-details'>New quote Page has the default values as expected for CNTcover :CNT Cover : LimitAmt = £50000, ExecessAmt =£200&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_177.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:11:09</td>
+<td class='step-details'>New quote Page has the default values as expected for PIcover :PersonalItems Cover : LimitAmt = £500, ExecessAmt =£100&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_178.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:14:09</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC010_UXP_CC_179.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='8ccfb0f1-39e2-49ca-a47a-d8dfc31bdab5'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC011 - Create NewBusiness policy with all covers added and Remove the covers in MTA transaction [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:14:13</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:22:52</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 8m 38s+842ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC011 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:14:51</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC011_UXP_CC_180.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:15:21</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:15:21</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:15:43</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:16:22</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC011_UXP_CC_185.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:16:22</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC011_UXP_CC_186.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:16:37</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC011_UXP_CC_187.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:16:49</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:16:49</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:16:49</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:16:50</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:16:53</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:16:53</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC011_UXP_CC_188.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:18:03</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC011_UXP_CC_189.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:18:40</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC011_UXP_CC_190.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:18:41</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:18:41</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:18:41</td>
+<td class='step-details'>Cover Chosen:Buildings and Contents</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:18:41</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:18:41</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:18:41</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:18:41</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC011_UXP_CC_193.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:18:41</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:19:47</td>
+<td class='step-details'>Entering customer details forBuildings and Contents corecover</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:22:52</td>
+<td class='step-details'>Unable to Enter Customer Details&emsp;<a href=".\ScreenShot\tcHoodCC011_UXP_CC_194.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='1adc2ca4-c1c2-4adc-8501-1ea8ee62ff13'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC012 - Create NewBusiness 5* policy with all covers added - PCL Payment [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:22:56</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:33:44</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 10m 47s+626ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC012 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:23:33</td>
+<td class='step-details'>UXP Contact Centre Landing Page : http://aldvmstweb02.siriusfs.com/SIaaS&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_195.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:24:00</td>
+<td class='step-details'>Successfully logged into UXP Home Page</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:24:00</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:24:17</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:24:54</td>
+<td class='step-details'>Sucessfully entered the customer details&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_200.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:24:55</td>
+<td class='step-details'>Clicked on Save customer&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_201.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:25:09</td>
+<td class='step-details'>custdashboardpage Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:25:09</td>
+<td class='step-details'>clicked on Newquote Button&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_204.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:25:22</td>
+<td class='step-details'>Entering Quote details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:25:22</td>
+<td class='step-details'>Entered Date10/03/2017</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:25:22</td>
+<td class='step-details'>Entered Intermediary103</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:25:23</td>
+<td class='step-details'>Selected productHHMOD</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:25:26</td>
+<td class='step-details'>Selected schemeHHMOD_ASDA</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:25:26</td>
+<td class='step-details'>Entered Quote Details successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_205.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:26:36</td>
+<td class='step-details'>clicked on continue button&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_206.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:27:13</td>
+<td class='step-details'>New Quote Page verified sucessfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_207.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:27:13</td>
+<td class='step-details'>Verified NewQuotePage</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:13</td>
+<td class='step-details'>Entering policy Details</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:13</td>
+<td class='step-details'>Cover Chosen:Buildings and Contents</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:13</td>
+<td class='step-details'>No of bedrooms:2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:13</td>
+<td class='step-details'>Year of Build:1990</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:14</td>
+<td class='step-details'>Property Type chosen:Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:27:14</td>
+<td class='step-details'>Successfully entered policy details&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_210.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:14</td>
+<td class='step-details'>Clicked Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:30</td>
+<td class='step-details'>Entering customer details forBuildings and Contents corecover</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:31</td>
+<td class='step-details'>Clicked on Next button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:43</td>
+<td class='step-details'>clicked on View Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:44</td>
+<td class='step-details'>Selected Agreement Statement :Customer agrees</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:27:45</td>
+<td class='step-details'>clicked on Save Button</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:28:12</td>
+<td class='step-details'>Clicked on Get Quote button sucessfully</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:28:32</td>
+<td class='step-details'>Add Accidental Damage_BLD cover type done successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_211.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:28:40</td>
+<td class='step-details'>Add Accidental Damage_CNT cover type done successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_212.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:28:46</td>
+<td class='step-details'>Add High Risk Items_CNT cover type done successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_213.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:28:54</td>
+<td class='step-details'>Add Garden cover_CNT cover type done successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_214.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:28:57</td>
+<td class='step-details'>Add Technology & Entertainment_CNT cover type done successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_215.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:29:09</td>
+<td class='step-details'>Add Pedal Cycles_CNT cover type done successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_216.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:29:17</td>
+<td class='step-details'>Add Home Emergency_BC cover type done successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_217.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:29:24</td>
+<td class='step-details'>Add Legal Expenses_BC cover type done successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_218.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:29:35</td>
+<td class='step-details'>Clicked on Upgrade now</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:29:48</td>
+<td class='step-details'>Policy upgraded successfully&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_219.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:30:09</td>
+<td class='step-details'>Clicked on Re-Calculate after upgrading policy</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:30:21</td>
+<td class='step-details'>New quote Page has the default values as expected for BLDcover :BLD Cover : LimitAmt = £750000, ExecessAmt =£200&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_220.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:30:32</td>
+<td class='step-details'>New quote Page has the default values as expected for CNTcover :CNT Cover : LimitAmt = £75000, ExecessAmt =£200&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_221.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:30:44</td>
+<td class='step-details'>New quote Page has the default values as expected for PIcover :PersonalItems Cover : LimitAmt = £500, ExecessAmt =£100&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_222.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:33:44</td>
+<td class='step-details'>Unable to Click on Buy Button - Premium values could be zero&emsp;<a href=".\ScreenShot\tcHoodCC012_UXP_CC_223.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='4e04b49d-0a36-4f04-936f-61eaa61d9159'>
+<div class='test-head'>
+<span class='test-name'>CC - tcHoodCC013 - Check whether the PCL is up or not [W7_chrome52] </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide  uxp_cc'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:33:49</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:34:01</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 12s+393ms</span>
+</div>
+<div class='test-desc'>ContactCentre - tcHoodCC013 [UXP_CC]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_CC</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:34:00</td>
+<td class='step-details'>PCL url Landing Page is loading&emsp;<a href=".\ScreenShot\tcHoodCC013_UXP_CC_224.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:34:01</td>
+<td class='step-details'>Page Loaded successfully&emsp;<a href=".\ScreenShot\tcHoodCC013_UXP_CC_225.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:34:01</td>
+<td class='step-details'>Heading identified<img class='report-img' data-featherlight='file:///E:\SSP QA\Latest Framework\New folder\Hood_SmokeSuite\target\surefire-reports\ScreenShot\tcHoodCC013_UXP_CC_226.png' src='file:///E:\SSP QA\Latest Framework\New folder\Hood_SmokeSuite\target\surefire-reports\ScreenShot\tcHoodCC013_UXP_CC_226.png' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:34:01</td>
+<td class='step-details'>Page successfully loaded with all XMLs present&emsp;<a href=".\ScreenShot\tcHoodCC013_UXP_CC_228.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='5124439b-39c4-4993-abce-a2c526383ef7'>
+<div class='test-head'>
+<span class='test-name'>tcCBTCC014 - New Business - BLD & CNT through IQH call[chrome_windows] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  ssp_smoketest'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:34:02</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:34:19</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 17s+610ms</span>
+</div>
+<div class='test-desc'>tcCBTCC014[chrome_windows]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>SSP_SmokeTest</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>SSP - UXP</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:34:19</td>
+<td class='step-details'>IQH has failed to generate premiums</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='4b64fd41-d3a4-4d87-9033-bdc50a37604f'>
+<div class='test-head'>
+<span class='test-name'>tcHoodCC015 - Create Person through web services and search the same person in Contact centre[chrome_windows] </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide  ssp_smoketest'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:34:23</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:36:51</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 2m 28s+362ms</span>
+</div>
+<div class='test-desc'>tcHoodCC015[chrome_windows]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>SSP_SmokeTest</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>SSP - UXP</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:34:26</td>
+<td class='step-details'>Web service endpoint URL: http://aldvmstweb02.siriusfs.com/HGSystemTest/TechnologyFrameworksWeb</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:34:26</td>
+<td class='step-details'>Successfully Created Contact through SOAP Call. Peron Id: 6550</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:34:27</td>
+<td class='step-details'>Retieve Contact Details through SOAP call!!. Person last name: M3423</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:35:08</td>
+<td class='step-details'>Navigated to Login Page&emsp;<a href=".\ScreenShot\tcHoodCC015_UXP_CC_229.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:35:30</td>
+<td class='step-details'>Logged into UXP with User id:GongarajaK& Password:Passw0rd</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:35:35</td>
+<td class='step-details'>Successfully logged into UXP Page&emsp;<a href=".\ScreenShot\tcHoodCC015_UXP_CC_230.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:35:55</td>
+<td class='step-details'>Search Page Verified</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:35:55</td>
+<td class='step-details'>Entered the Last Name: M3423</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:35:56</td>
+<td class='step-details'>Entered the first Name: Ranjith3423</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:35:56</td>
+<td class='step-details'>Clicked on Search button:</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:35:56</td>
+<td class='step-details'>Searching with the last name : M3423</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:36:03</td>
+<td class='step-details'>Has the expected search result</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:36:40</td>
+<td class='step-details'>Customer Dashboard Page is loaded properly</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:36:51</td>
+<td class='step-details'>successfully Searched FirstName and LastName on Customer Dashboard</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='5dbab9f7-718c-429e-b52b-144ebd43945f'>
+<div class='test-head'>
+<span class='test-name'>WJ - tcCBTWJ001 - Create policy in Webjourney - PCL Payment [W7_chrome52] </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide  uxp_wj'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:36:55</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:39:26</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 2m 31s+176ms</span>
+</div>
+<div class='test-desc'>Webjourney - tcHoodWJ001[UXP_WJ]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_WJ</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:06</td>
+<td class='step-details'>UXP-Webjourney Launched Successfully!!</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:07</td>
+<td class='step-details'>Navigated to Get Quote Page successfully!!&emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_237.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:07</td>
+<td class='step-details'>Entering address of the customer with postcode : GU111PZ</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:10</td>
+<td class='step-details'>Selecting Cover Type : Contents</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:10</td>
+<td class='step-details'>Entering year of Build : 2001</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:10</td>
+<td class='step-details'>Selecting number of Bedrooms : 2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:11</td>
+<td class='step-details'>Selecting number of Bedrooms : Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:11</td>
+<td class='step-details'>Entered Details of Home&emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_238.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:11</td>
+<td class='step-details'>Selecting title : Mr</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:11</td>
+<td class='step-details'>Entering first name : Sanitytest</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:11</td>
+<td class='step-details'>Entering Last Name :Sanitysn</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:14</td>
+<td class='step-details'>Selecting Date of Birth : 02-March-1994</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:14</td>
+<td class='step-details'>Number of years Content Insurance Held : 2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:14</td>
+<td class='step-details'>Select Join policy Holder ?No</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:14</td>
+<td class='step-details'>Entered Details of Customer &emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_239.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:14</td>
+<td class='step-details'>Previous Claims Made ? No</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:14</td>
+<td class='step-details'>Personal Items? No</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:18</td>
+<td class='step-details'>Bicycle?No</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:27</td>
+<td class='step-details'>High Risk Items?No</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:27</td>
+<td class='step-details'>Have any promo code?No</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:27</td>
+<td class='step-details'>Entered other details &emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_240.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:41</td>
+<td class='step-details'>Details entered and clicked on Get Quote</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:42</td>
+<td class='step-details'>Verified Premium Value and Premium amount successfully&emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_241.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:42</td>
+<td class='step-details'>Navigating to Summary Page</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:43</td>
+<td class='step-details'>Successfully Navigated to Summary Page&emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_242.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:43</td>
+<td class='step-details'>Confirm Agreement Statement</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:44</td>
+<td class='step-details'>Navigating to Payment Page</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:45</td>
+<td class='step-details'>Navigated to Payment Page&emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_243.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:45</td>
+<td class='step-details'>Entering Email Address:Sanitytest123@test.com</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:45</td>
+<td class='step-details'>Confirming Email Address: Sanitytest123@test.com</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:47</td>
+<td class='step-details'>Entering Phone number :07328554450</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:47</td>
+<td class='step-details'>Selected Payment MethodMonthly</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:48</td>
+<td class='step-details'>Installment Option ?Yes</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:48</td>
+<td class='step-details'>Account Holder Name :Sanitytest</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:48</td>
+<td class='step-details'>SortCode :090126</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:48</td>
+<td class='step-details'>Account Number :02948723</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:48</td>
+<td class='step-details'>UK Resident ?Yes</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:38:48</td>
+<td class='step-details'>Any Bankrupcy?No</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:49</td>
+<td class='step-details'>Entered Customer and Bank Details&emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_244.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:38:49</td>
+<td class='step-details'>Agreed with the Agreement Statement&emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_245.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:39:06</td>
+<td class='step-details'>Navigated to Confirmation Page successfully&emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_246.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:39:06</td>
+<td class='step-details'>Clicked on Confirm Statement</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:39:26</td>
+<td class='step-details'>Clicked on Get Covered button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:39:26</td>
+<td class='step-details'>Created Policy Successfully using PCL Payment , HD-ASD-4982036&emsp;<a href=".\ScreenShot\tcHoodWJ001_UXP_WJ_247.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='8fc8775f-df56-439a-9f60-9449b363281f'>
+<div class='test-head'>
+<span class='test-name'>WJ - tcCBTWJ002 - Create policy in Webjourney - Annual [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_wj'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:39:31</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:44:28</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 4m 57s+703ms</span>
+</div>
+<div class='test-desc'>Webjourney - tcHoodWJ002[UXP_WJ]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_WJ</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:40:43</td>
+<td class='step-details'>Step-1: UXP-Webjourney Launched Successfully!!</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:40:43</td>
+<td class='step-details'>Navigated to Get Quote Page successfully!!&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_248.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:43</td>
+<td class='step-details'>Entering address of the customer with postcode : GU111PZ</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:46</td>
+<td class='step-details'>Selecting Cover Type : Contents</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:46</td>
+<td class='step-details'>Entering year of Build : 2001</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:47</td>
+<td class='step-details'>Selecting number of Bedrooms : 2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:47</td>
+<td class='step-details'>Selecting number of Bedrooms : Detached House</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:40:47</td>
+<td class='step-details'>Entered Details of Home&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_249.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:47</td>
+<td class='step-details'>Selecting title : Mr</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:47</td>
+<td class='step-details'>Entering first name : Sanitytest</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:47</td>
+<td class='step-details'>Entering Last Name :Sanitysn</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:50</td>
+<td class='step-details'>Selecting Date of Birth : 02-March-1994</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:50</td>
+<td class='step-details'>Number of years Content Insurance Held : 2</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:50</td>
+<td class='step-details'>Select Join policy Holder ?No</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:40:50</td>
+<td class='step-details'>Entered Details of Customer &emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_250.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:51</td>
+<td class='step-details'>Previous Claims Made ? No</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:51</td>
+<td class='step-details'>Personal Items? No</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:40:54</td>
+<td class='step-details'>Bicycle?No</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:03</td>
+<td class='step-details'>High Risk Items?No</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:03</td>
+<td class='step-details'>Have any promo code?No</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:41:03</td>
+<td class='step-details'>Entered other details &emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_251.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:27</td>
+<td class='step-details'>Details entered and clicked on Get Quote</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:41:28</td>
+<td class='step-details'>Verified Premium Value and Premium amount successfully&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_252.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:28</td>
+<td class='step-details'>Navigating to Summary Page</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:41:29</td>
+<td class='step-details'>Successfully Navigated to Summary Page&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_253.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:29</td>
+<td class='step-details'>Confirm Agreement Statement</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:31</td>
+<td class='step-details'>Navigating to Payment Page</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:41:31</td>
+<td class='step-details'>Navigated to Payment Page&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_254.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:31</td>
+<td class='step-details'>Entering Email Address:Sanitytest@test.com</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:32</td>
+<td class='step-details'>Entering Confirm Email Address: Sanitytest@test.com</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:34</td>
+<td class='step-details'>Entering Phone07328554450</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:34</td>
+<td class='step-details'>Selected Payment Method:Annual</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:41:37</td>
+<td class='step-details'>Change Billing Address : No</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:41:37</td>
+<td class='step-details'>Entered Customer and Bank Details&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_255.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:42:59</td>
+<td class='step-details'>Navigating to Sage Pay Page</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:43:02</td>
+<td class='step-details'>Successfully Navigated to SagePay Page&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_256.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:43:02</td>
+<td class='step-details'>Entering Card Number : 4929000000006</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:43:02</td>
+<td class='step-details'>Selecting Expiry Month : 02</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:43:02</td>
+<td class='step-details'>Selecting Expiry Year : 17</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:43:02</td>
+<td class='step-details'>Selecting Expiry Year : 234</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>19:43:03</td>
+<td class='step-details'>Navigate to SagePay Confirmation Page</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:43:03</td>
+<td class='step-details'>Successfully Navigated to SagePay Confirmation Page&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_257.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:44:28</td>
+<td class='step-details'>Timed out after 10 seconds. Unable to locate the element&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_258.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:44:28</td>
+<td class='step-details'>Timed out after 10 seconds. Unable to locate the element&emsp;<a href=".\ScreenShot\tcHoodWJ002_UXP_WJ_258.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='839421d7-dd9e-4fb0-bf95-48a8244601ab'>
+<div class='test-head'>
+<span class='test-name'>SS - tcHoodSS001 - Login to UXP Self Service [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_ss'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:44:33</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:45:20</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 47s+113ms</span>
+</div>
+<div class='test-desc'>Self Service - tcHoodSS001[UXP_SS]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_SS</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:44:49</td>
+<td class='step-details'>Self Serve Home Page is not loaded&emsp;<a href=".\ScreenShot\tcHoodSS001_UXP_SS_259.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:44:54</td>
+<td class='step-details'>Step-2: Clicked on SignIn Link!!</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:44:59</td>
+<td class='step-details'>Step-3: Navigated to Login Page Successfully!!&emsp;<a href=".\ScreenShot\tcHoodSS001_UXP_SS_260.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:44:59</td>
+<td class='step-details'>Step-4: Entered Email id : harsh.kumar@aspiresys.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:44:59</td>
+<td class='step-details'>Step-5: Entered Password :Passw0rd03</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:45:20</td>
+<td class='step-details'>Step-6: Logged into Self Service Application successfully&emsp;<a href=".\ScreenShot\tcHoodSS001_UXP_SS_261.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='1e0e3655-fa28-41db-a7ce-4077be67a262'>
+<div class='test-head'>
+<span class='test-name'>SS - tcHoodSS002 - Click on New Quote and Verify Customer Details [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_ss'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:45:24</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:46:21</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 57s+292ms</span>
+</div>
+<div class='test-desc'>Self Service - tcHoodSS002[UXP_SS]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_SS</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:45:41</td>
+<td class='step-details'>Self Serve Home Page is not loaded&emsp;<a href=".\ScreenShot\tcHoodSS002_UXP_SS_262.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:45:46</td>
+<td class='step-details'>Step-2: Clicked on SignIn Link!!</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:45:52</td>
+<td class='step-details'>Step-3: Navigated to Login Page Successfully!!&emsp;<a href=".\ScreenShot\tcHoodSS002_UXP_SS_263.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:45:52</td>
+<td class='step-details'>Step-4: Entered Email id :harsh.kumar@aspiresys.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:45:52</td>
+<td class='step-details'>Step-5: Entered Password: Passw0rd03</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:46:13</td>
+<td class='step-details'>Step-6: Logged into Self Service Application and Verified Name of the customer!&emsp;<a href=".\ScreenShot\tcHoodSS002_UXP_SS_264.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:46:21</td>
+<td class='step-details'>Step-7: Navigated to your details page successfully</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:46:21</td>
+<td class='step-details'>Step-7: Customer Details Verified!&emsp;<a href=".\ScreenShot\tcHoodSS002_UXP_SS_265.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='ef380344-adc1-4f29-a11f-539ccb00fb2c'>
+<div class='test-head'>
+<span class='test-name'>SS - tcHoodSS003 - Go to Continue Quote and Verify Quote [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_ss'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:46:25</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:47:35</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 10s+150ms</span>
+</div>
+<div class='test-desc'>Self Service - tcHoodSS003[UXP_SS]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_SS</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:46:41</td>
+<td class='step-details'>Self Serve Home Page is not loaded&emsp;<a href=".\ScreenShot\tcHoodSS003_UXP_SS_266.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:46:46</td>
+<td class='step-details'>Step-2: Clicked on SignIn Link!!</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:46:52</td>
+<td class='step-details'>Step-3: Navigated to Login Page Successfully!!&emsp;<a href=".\ScreenShot\tcHoodSS003_UXP_SS_267.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:46:52</td>
+<td class='step-details'>Step-4: Entered Email id : harsh.kumar@aspiresys.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:46:52</td>
+<td class='step-details'>Step-5: Entered Password :Passw0rd03</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:47:12</td>
+<td class='step-details'>Step-6: Logged into Self Service Application successfully&emsp;<a href=".\ScreenShot\tcHoodSS003_UXP_SS_268.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:47:35</td>
+<td class='step-details'>Step-7: Clicked on Continue Quote</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:47:35</td>
+<td class='step-details'>Step-8: Verified Premium Value and Premium amount successfully&emsp;<a href=".\ScreenShot\tcHoodSS003_UXP_SS_269.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:47:35</td>
+<td class='step-details'>Step-9: Verified Quote Number Successfully</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='c7769fca-fe68-48da-b928-8eb80a8a5d43'>
+<div class='test-head'>
+<span class='test-name'>SS - tcHoodSS004 - View Documents [W7_chrome52] </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide  uxp_ss'></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-03-10 19:47:39</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-03-10 19:48:39</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 0s+445ms</span>
+</div>
+<div class='test-desc'>Self Service - tcHoodSS004[UXP_SS]</div>
+<div class='test-attributes'>
+<div class='categories'>
+<span class='category text-white'>UXP_SS</span>
+</div>
+<div class='authors'>
+<span class='author text-white'>UXP_NFR Team</span>
+</div>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>19:47:55</td>
+<td class='step-details'>Self Serve Home Page is not loaded&emsp;<a href=".\ScreenShot\tcHoodSS004_UXP_SS_270.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:48:00</td>
+<td class='step-details'>Step-2: Clicked on SignIn Link!!</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:48:06</td>
+<td class='step-details'>Step-3: Navigated to Login Page Successfully!!&emsp;<a href=".\ScreenShot\tcHoodSS004_UXP_SS_271.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:48:06</td>
+<td class='step-details'>Step-4: Entered Email id : harsh.kumar@aspiresys.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:48:06</td>
+<td class='step-details'>Step-5: Entered Password :Passw0rd03</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:48:25</td>
+<td class='step-details'>Step-6: Logged into Self Service Application successfully&emsp;<a href=".\ScreenShot\tcHoodSS004_UXP_SS_272.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>19:48:39</td>
+<td class='step-details'>Step-7: Verified View Document Successfully&emsp;<a href=".\ScreenShot\tcHoodSS004_UXP_SS_273.png" target="_blank" >[ScreenShot]</a></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id='test-details-wrapper' class='col _addedCell2'>
+<div class='contents'>
+<div class='card-panel details-view'>
+<h5 class='details-name'></h5>
+<div class='details-container'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /tests -->
+
+<!-- categories -->
+<div id='categories-view' class='row _addedTable hide'>
+<div class='col _addedCell1'>
+<div class='contents'>
+<div class='card-panel heading'>
+<h5>Categories</h5>
+</div>
+<div class='card-panel filters'>
+<div class='search' alt='Search tests' title='Search tests'>
+<div class='input-field left'>
+<input id='searchTests' type='text' class='validate' placeholder='Search tests...'>
+</div>
+<i class='mdi-action-search icon'></i>
+</div>
+</div>
+<div class='card-panel no-padding-h no-padding-v'>
+<div class='wrapper'>
+<ul id='cat-collection' class='cat-collection'>
+<li class='category-item displayed'>
+<div class='cat-head'>
+<span class='category-name'>SSP_SmokeTest</span>
+</div>
+<div class='category-status-counts'>
+<span class='pass label dot'>Pass: 2</span>
+<span class='fail label dot'>Fail: 2</span>
+</div>
+<div class='cat-body'>
+<div class='category-status-counts'>
+<div class='button-group'>
+<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
+<a href='#!' class='fail label filter'>Fail <span class='icon'>2</span></a>
+<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+</div>
+</div>
+<div class='cat-tests'>
+<table class='bordered'>
+<thead>
+<tr>
+<th>RunDate</th>
+<th>Test Name</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class='fail'>
+<td>2017-03-10 19:34:02</td>
+<td><span class='category-link linked' extentid='5124439b-39c4-4993-abce-a2c526383ef7'>tcCBTCC014 - New Business - BLD & CNT through IQH call[chrome_windows]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 19:34:02</td>
+<td><span class='category-link linked' extentid='5124439b-39c4-4993-abce-a2c526383ef7'>tcCBTCC014 - New Business - BLD & CNT through IQH call[chrome_windows]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='pass'>
+<td>2017-03-10 19:34:23</td>
+<td><span class='category-link linked' extentid='4b64fd41-d3a4-4d87-9033-bdc50a37604f'>tcHoodCC015 - Create Person through web services and search the same person in Contact centre[chrome_windows]</span></td>
+<td><div class='status label capitalize pass'>pass</div></td>
+</tr>
+<tr class='pass'>
+<td>2017-03-10 19:34:23</td>
+<td><span class='category-link linked' extentid='4b64fd41-d3a4-4d87-9033-bdc50a37604f'>tcHoodCC015 - Create Person through web services and search the same person in Contact centre[chrome_windows]</span></td>
+<td><div class='status label capitalize pass'>pass</div></td>
+</tr>
+<tbody>
+</table>
+</div>
+</div> 
+</li>
+<li class='category-item displayed'>
+<div class='cat-head'>
+<span class='category-name'>UXP_CC</span>
+</div>
+<div class='category-status-counts'>
+<span class='pass label dot'>Pass: 3</span>
+<span class='fail label dot'>Fail: 11</span>
+</div>
+<div class='cat-body'>
+<div class='category-status-counts'>
+<div class='button-group'>
+<a href='#!' class='pass label filter'>Pass <span class='icon'>3</span></a>
+<a href='#!' class='fail label filter'>Fail <span class='icon'>11</span></a>
+<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+</div>
+</div>
+<div class='cat-tests'>
+<table class='bordered'>
+<thead>
+<tr>
+<th>RunDate</th>
+<th>Test Name</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class='fail'>
+<td>2017-03-10 17:48:10</td>
+<td><span class='category-link linked' extentid='f795c530-cad2-453e-aebf-af7455e5d0e6'>CC - tcHoodCC001 - Create NewBusiness 3* Policy - Annual Payment and search the created NB policy through normal policy search [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='pass'>
+<td>2017-03-10 17:56:40</td>
+<td><span class='category-link linked' extentid='65cfaf27-39df-404a-9836-031c18ada980'>CC - tcHoodCC002 - VerifyAdvanced search through Make call functionality [W7_chrome52]</span></td>
+<td><div class='status label capitalize pass'>pass</div></td>
+</tr>
+<tr class='pass'>
+<td>2017-03-10 17:56:40</td>
+<td><span class='category-link linked' extentid='65cfaf27-39df-404a-9836-031c18ada980'>CC - tcHoodCC002 - VerifyAdvanced search through Make call functionality [W7_chrome52]</span></td>
+<td><div class='status label capitalize pass'>pass</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 17:59:51</td>
+<td><span class='category-link linked' extentid='a54a61df-4b52-4460-bb24-c08010cee3f3'>CC - tcHoodCC003 - Create NewBusiness 3*  Policy - PCL Payment  [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 18:08:20</td>
+<td><span class='category-link linked' extentid='5ddaf27f-f4a9-4716-a6e4-c85405c57e68'>CC - tcHoodCC004 - Create New Business 5* Policy - PCL Payment -  validate 3 monthly documents [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 18:17:36</td>
+<td><span class='category-link linked' extentid='11406324-008f-4f6c-b26b-d8bc59ef5178'>CC - tcHoodCC005 - Create New Business 5* Policy - Annual Payment  [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 18:27:04</td>
+<td><span class='category-link linked' extentid='f7d1f71d-b739-4cc6-a3a1-b2f8d4ef36e2'>CC - tcHoodCC006 - Create New Policy - Annual Payment  and  Verify Document Generation  [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 18:36:31</td>
+<td><span class='category-link linked' extentid='4022d876-dbaa-44ce-b31f-cea4ab3b162a'>CC - tcHoodCC007 - Create NewBusiness Policy - PCL Payment and verfiy document  Generation [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 18:45:12</td>
+<td><span class='category-link linked' extentid='9bae3c25-bf22-46c6-808f-ef6639ce6553'>CC - tcHoodCC008 - Create New Policy-Annual payment - 5 Star Policy -Cancellation and reinstatement [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 18:54:58</td>
+<td><span class='category-link linked' extentid='3892aabe-ffd5-43d3-bdce-b7ffc70fbf3a'>CC - tcHoodCC009 - Create New Policy-Annual payment - 5 Star Policy -Cancel cooling off and reinstatement [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 19:04:23</td>
+<td><span class='category-link linked' extentid='0d5bd5ed-347a-470e-a2cf-6e93d94d3366'>CC - tcHoodCC010 - Create a NewBusiness Policy - Do MTA by adding Addons to the NB policy [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 19:14:13</td>
+<td><span class='category-link linked' extentid='8ccfb0f1-39e2-49ca-a47a-d8dfc31bdab5'>CC - tcHoodCC011 - Create NewBusiness policy with all covers added and Remove the covers in MTA transaction [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 19:22:56</td>
+<td><span class='category-link linked' extentid='1adc2ca4-c1c2-4adc-8501-1ea8ee62ff13'>CC - tcHoodCC012 - Create NewBusiness 5* policy with all covers added - PCL Payment [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='pass'>
+<td>2017-03-10 19:33:49</td>
+<td><span class='category-link linked' extentid='4e04b49d-0a36-4f04-936f-61eaa61d9159'>CC - tcHoodCC013 - Check whether the PCL is up or not [W7_chrome52]</span></td>
+<td><div class='status label capitalize pass'>pass</div></td>
+</tr>
+<tbody>
+</table>
+</div>
+</div> 
+</li>
+<li class='category-item displayed'>
+<div class='cat-head'>
+<span class='category-name'>UXP_SS</span>
+</div>
+<div class='category-status-counts'>
+<span class='fail label dot'>Fail: 4</span>
+</div>
+<div class='cat-body'>
+<div class='category-status-counts'>
+<div class='button-group'>
+<a href='#!' class='pass label filter'>Pass <span class='icon'>0</span></a>
+<a href='#!' class='fail label filter'>Fail <span class='icon'>4</span></a>
+<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+</div>
+</div>
+<div class='cat-tests'>
+<table class='bordered'>
+<thead>
+<tr>
+<th>RunDate</th>
+<th>Test Name</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class='fail'>
+<td>2017-03-10 19:44:33</td>
+<td><span class='category-link linked' extentid='839421d7-dd9e-4fb0-bf95-48a8244601ab'>SS - tcHoodSS001 - Login to UXP Self Service [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 19:45:24</td>
+<td><span class='category-link linked' extentid='1e0e3655-fa28-41db-a7ce-4077be67a262'>SS - tcHoodSS002 - Click on New Quote and Verify Customer Details [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 19:46:25</td>
+<td><span class='category-link linked' extentid='ef380344-adc1-4f29-a11f-539ccb00fb2c'>SS - tcHoodSS003 - Go to Continue Quote and Verify Quote [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 19:47:39</td>
+<td><span class='category-link linked' extentid='c7769fca-fe68-48da-b928-8eb80a8a5d43'>SS - tcHoodSS004 - View Documents [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tbody>
+</table>
+</div>
+</div> 
+</li>
+<li class='category-item displayed'>
+<div class='cat-head'>
+<span class='category-name'>UXP_WJ</span>
+</div>
+<div class='category-status-counts'>
+<span class='pass label dot'>Pass: 2</span>
+<span class='fail label dot'>Fail: 1</span>
+</div>
+<div class='cat-body'>
+<div class='category-status-counts'>
+<div class='button-group'>
+<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
+<a href='#!' class='fail label filter'>Fail <span class='icon'>1</span></a>
+<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+</div>
+</div>
+<div class='cat-tests'>
+<table class='bordered'>
+<thead>
+<tr>
+<th>RunDate</th>
+<th>Test Name</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class='pass'>
+<td>2017-03-10 19:36:55</td>
+<td><span class='category-link linked' extentid='5dbab9f7-718c-429e-b52b-144ebd43945f'>WJ - tcCBTWJ001 - Create policy in Webjourney - PCL Payment [W7_chrome52]</span></td>
+<td><div class='status label capitalize pass'>pass</div></td>
+</tr>
+<tr class='pass'>
+<td>2017-03-10 19:36:55</td>
+<td><span class='category-link linked' extentid='5dbab9f7-718c-429e-b52b-144ebd43945f'>WJ - tcCBTWJ001 - Create policy in Webjourney - PCL Payment [W7_chrome52]</span></td>
+<td><div class='status label capitalize pass'>pass</div></td>
+</tr>
+<tr class='fail'>
+<td>2017-03-10 19:39:31</td>
+<td><span class='category-link linked' extentid='8fc8775f-df56-439a-9f60-9449b363281f'>WJ - tcCBTWJ002 - Create policy in Webjourney - Annual [W7_chrome52]</span></td>
+<td><div class='status label capitalize fail'>fail</div></td>
+</tr>
+<tbody>
+</table>
+</div>
+</div> 
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id='cat-details-wrapper' class='col _addedCell2'>
+<div class='contents'>
+<div class='card-panel details-view'>
+<h5 class='cat-name'></h5>
+<div class='cat-container'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /categories -->
+
+<!-- exceptions -->
+<!-- /exceptions -->
+
+<!-- testrunner logs -->
+<!-- /testrunner logs -->
+
+</div>
+<!-- /container -->
+
+<!-- test dashboard counts setting -->
+<div id='test-count-setting' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Configure Tests Count Setting</h5> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodes' class='with-gap'> 
+<label for='parentWithoutNodes'>Parent Tests Only (Does not include child nodes in counts)</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodesAndNodes' class='with-gap'> 
+<label for='parentWithoutNodesAndNodes'>Parent Tests Without Child Tests + Child Tests</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='childNodes' class='with-gap'> 
+<label for='childNodes'>Child Tests Only</label> 
+</div> 
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /test dashboard counts setting -->
+
+<!-- filter for step status -->
+<div id='step-status-filter' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Select status</h5> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-pass'> 
+<label for='step-dashboard-filter-pass'>Pass</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fail'> 
+<label for='step-dashboard-filter-fail'>Fail</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fatal'> 
+<label for='step-dashboard-filter-fatal'>Fatal</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-error'> 
+<label for='step-dashboard-filter-error'>Error</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-warning'> 
+<label for='step-dashboard-filter-warning'>Warning</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-skip'> 
+<label for='step-dashboard-filter-skip'>Skipped</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-info'> 
+<label for='step-dashboard-filter-info'>Info</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-unknown'> 
+<label for='step-dashboard-filter-unknown'>Unknown</label> 
+</div>
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /filter for step status -->
+
+<script src='https://cdn.rawgit.com/anshooarora/extentreports/c936a26fc8bb9c5fc0253b5bc6f289e1d14bb595/cdn/extent.js' type='text/javascript'></script>
+
+<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
+<script>
+
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+</script>
+</body>
+</html>

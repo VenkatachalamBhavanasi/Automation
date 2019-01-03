@@ -1,0 +1,202 @@
+2018-08-10 11:05:09,117 WARN  [SoapUI] Missing folder [E:\hood-local\UIAutomation\ext] for external libraries
+2018-08-10 11:05:09,319 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\harsh.kumar\soapui-settings.xml]
+2018-08-10 11:05:09,798 INFO  [PluginManager] 0 plugins loaded in 2 ms
+2018-08-10 11:05:09,798 INFO  [DefaultSoapUICore] All plugins loaded
+2018-08-10 11:05:10,349 INFO  [WsdlProject] Loaded project from [file:/E:/hood-local/UIAutomation/src/main/resources/projects/CreateTestUsers-soapui-project.xml]
+2018-08-10 11:05:11,973 INFO  [TestNG-PoolService-0] Create Person SoapUI response<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <stn_1:response xmlns:stn_1="urn:PersonSave">
+         <stn_1:objectIdentity>1011585</stn_1:objectIdentity>
+      </stn_1:response>
+   </soapenv:Body>
+</soapenv:Envelope>
+2018-08-10 11:05:11,990 INFO  [WsdlProject] Loaded project from [file:/E:/hood-local/UIAutomation/src/main/resources/projects/CreateTestUsers-soapui-project.xml]
+2018-08-10 11:05:12,318 INFO  [TestNG-PoolService-0] Save System User SoapUI response<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <stn_1:systemUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stn_1="urn:SystemUserSave">
+         <stn_1:objectIdentity>1036670</stn_1:objectIdentity>
+         <stn_1:roleType>System User</stn_1:roleType>
+         <stn_1:uniqueReference>1009418</stn_1:uniqueReference>
+         <stn_1:dateCreated>2018-08-10+01:00</stn_1:dateCreated>
+         <stn_1:statusDate>2018-08-10+01:00</stn_1:statusDate>
+         <stn_1:status>Authorised</stn_1:status>
+         <stn_1:terminationReason xsi:nil="true"/>
+         <stn_1:contactIdentity>1011585</stn_1:contactIdentity>
+         <stn_1:contactEffectiveDate xsi:nil="true"/>
+         <stn_1:contactType>Person</stn_1:contactType>
+         <stn_1:contactUniqueReference>1009411</stn_1:contactUniqueReference>
+         <stn_1:effectiveDate>2018-08-10T06:35:12.319+01:00</stn_1:effectiveDate>
+         <stn_1:previousEffectiveDate xsi:nil="true"/>
+         <stn_1:typeName>SystemUser</stn_1:typeName>
+         <stn_1:hasAttachments>0</stn_1:hasAttachments>
+         <stn_1:principal>
+            <stn_1:typeName>Principal</stn_1:typeName>
+            <stn_1:objectIdentity>1006448</stn_1:objectIdentity>
+            <stn_1:principalID>Harshodxebbyzmw</stn_1:principalID>
+            <stn_1:principalName>Harshodxeb testerhqakn</stn_1:principalName>
+            <stn_1:contactID>1011585</stn_1:contactID>
+            <stn_1:isExternalUser>false</stn_1:isExternalUser>
+            <stn_1:effectiveDate xsi:nil="true"/>
+            <stn_1:principalRules>
+               <stn_1:typeName>PrincipalRules</stn_1:typeName>
+               <stn_1:objectIdentity xsi:nil="true"/>
+               <stn_1:startingDate>2018-08-10+01:00</stn_1:startingDate>
+               <stn_1:endDate xsi:nil="true"/>
+               <stn_1:userCanChange>true</stn_1:userCanChange>
+               <stn_1:userMustChange>false</stn_1:userMustChange>
+               <stn_1:expires>true</stn_1:expires>
+               <stn_1:unlockAccount>false</stn_1:unlockAccount>
+               <stn_1:passwordReset>false</stn_1:passwordReset>
+               <stn_1:memorableWordApplies>false</stn_1:memorableWordApplies>
+               <stn_1:memorableWord xsi:nil="true"/>
+               <stn_1:jaasServerId>1</stn_1:jaasServerId>
+               <stn_1:temporaryPassword>Passw0rd</stn_1:temporaryPassword>
+            </stn_1:principalRules>
+            <stn_1:principalPreferences>
+               <stn_1:typeName>PrincipalPreferences</stn_1:typeName>
+               <stn_1:principalPreferencesIdentity xsi:nil="true"/>
+               <stn_1:languageCode>English</stn_1:languageCode>
+               <stn_1:countryCode>GB</stn_1:countryCode>
+               <stn_1:principalName>Harshodxeb testerhqakn</stn_1:principalName>
+               <stn_1:systemDateFormat>dd/MM/yyyy</stn_1:systemDateFormat>
+            </stn_1:principalPreferences>
+         </stn_1:principal>
+      </stn_1:systemUser>
+   </soapenv:Body>
+</soapenv:Envelope>
+2018-08-10 11:05:12,320 INFO  [TestNG-PoolService-0] Credentials created through SOAPUI- UserName: 1011585 Password: Passw0rd
+2018-08-10 11:05:12,328 INFO  [WsdlProject] Loaded project from [file:/E:/hood-local/UIAutomation/src/main/resources/projects/CreateTestUsers-soapui-project.xml]
+2018-08-10 11:05:12,717 INFO  [TestNG-PoolService-0] Underwriter Save SoapUI response<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <stn_1:personnel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stn_1="urn:PersonnelRetrieve_v2">
+         <stn_1:status>1</stn_1:status>
+         <stn_1:terminationReason xsi:nil="true"/>
+         <stn_1:roleType>trader</stn_1:roleType>
+         <stn_1:objectIdentity>1036671</stn_1:objectIdentity>
+         <stn_1:uniqueReference>1009419</stn_1:uniqueReference>
+         <stn_1:contactIdentity>1011585</stn_1:contactIdentity>
+         <stn_1:contactEffectiveDate xsi:nil="true"/>
+         <stn_1:contactType>Person</stn_1:contactType>
+         <stn_1:typeName>Personnel</stn_1:typeName>
+         <stn_1:hasAttachments>0</stn_1:hasAttachments>
+         <stn_1:statusDate>2018-08-10+01:00</stn_1:statusDate>
+         <stn_1:effectiveDate>2018-08-10T06:35:12.587+01:00</stn_1:effectiveDate>
+         <stn_1:previousEffectiveDate xsi:nil="true"/>
+         <stn_1:dateCreated>2018-08-10+01:00</stn_1:dateCreated>
+         <stn_1:contactUniqueReference>1009411</stn_1:contactUniqueReference>
+         <stn_1:jobTitle>UW</stn_1:jobTitle>
+         <stn_1:defaultLocale>2</stn_1:defaultLocale>
+         <stn_1:currency>GBP</stn_1:currency>
+         <stn_1:businessUnit>
+            <stn_1:address>1st Floor Maitland House
+Warrior Square
+Essex
+1st Floor Maitland House
+Warrior Square
+Southend-On-Sea
+Essex
+SS1 2JY</stn_1:address>
+            <stn_1:contactTypeName>Company</stn_1:contactTypeName>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>1</stn_1:forUpdate>
+            <stn_1:objectIdentity>53</stn_1:objectIdentity>
+            <stn_1:description xsi:nil="true"/>
+            <stn_1:name>Asda Business Unit</stn_1:name>
+            <stn_1:roleType>Business Unit</stn_1:roleType>
+            <stn_1:typeName>BusinessUnit</stn_1:typeName>
+            <stn_1:uniqueReference>4</stn_1:uniqueReference>
+         </stn_1:businessUnit>
+         <stn_1:defaultAssociation>
+            <stn_1:address xsi:nil="true"/>
+            <stn_1:contactTypeName xsi:nil="true"/>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>1</stn_1:forUpdate>
+            <stn_1:objectIdentity xsi:nil="true"/>
+            <stn_1:name xsi:nil="true"/>
+            <stn_1:roleType>Association</stn_1:roleType>
+            <stn_1:typeName>Intermediary</stn_1:typeName>
+            <stn_1:uniqueReference xsi:nil="true"/>
+         </stn_1:defaultAssociation>
+         <stn_1:defaultIntermediary>
+            <stn_1:address xsi:nil="true"/>
+            <stn_1:contactTypeName xsi:nil="true"/>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>1</stn_1:forUpdate>
+            <stn_1:objectIdentity xsi:nil="true"/>
+            <stn_1:name xsi:nil="true"/>
+            <stn_1:roleType>Intermediary</stn_1:roleType>
+            <stn_1:typeName>Intermediary</stn_1:typeName>
+            <stn_1:uniqueReference xsi:nil="true"/>
+         </stn_1:defaultIntermediary>
+         <stn_1:supervisor>
+            <stn_1:address xsi:nil="true"/>
+            <stn_1:contactTypeName xsi:nil="true"/>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>1</stn_1:forUpdate>
+            <stn_1:objectIdentity xsi:nil="true"/>
+            <stn_1:name xsi:nil="true"/>
+            <stn_1:roleType>Underwriter</stn_1:roleType>
+            <stn_1:typeName>Personnel</stn_1:typeName>
+            <stn_1:uniqueReference xsi:nil="true"/>
+         </stn_1:supervisor>
+         <stn_1:organisationBankAccount>
+            <stn_1:typeName>BankAccount</stn_1:typeName>
+            <stn_1:reference>3881502</stn_1:reference>
+            <stn_1:name>Hood Group Asda A/C</stn_1:name>
+            <stn_1:description>Asda Insurance</stn_1:description>
+            <stn_1:inRef>654321</stn_1:inRef>
+            <stn_1:extension xsi:nil="true"/>
+            <stn_1:orgBankRoleUrn xsi:nil="true"/>
+            <stn_1:contactUrn xsi:nil="true"/>
+            <stn_1:bsbCode>309784</stn_1:bsbCode>
+            <stn_1:currency>GBP</stn_1:currency>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>0</stn_1:forUpdate>
+            <stn_1:objectIdentity>2</stn_1:objectIdentity>
+         </stn_1:organisationBankAccount>
+         <stn_1:principal>
+            <stn_1:objectIdentity xsi:nil="true"/>
+            <stn_1:typeName>Principal</stn_1:typeName>
+            <stn_1:accessProfiles/>
+            <stn_1:skillProfiles/>
+         </stn_1:principal>
+         <stn_1:businessUnitProfile>
+            <stn_1:objectIdentity>3</stn_1:objectIdentity>
+            <stn_1:name>All Business Units</stn_1:name>
+            <stn_1:typeName>BusinessUnitProfile</stn_1:typeName>
+         </stn_1:businessUnitProfile>
+      </stn_1:personnel>
+   </soapenv:Body>
+</soapenv:Envelope>
+2018-08-10 11:05:18,211 INFO  [TestNG-PoolService-0] Engagement Centre Landing Page : https://hood-test.ssp-hosting.com/SIaaS
+2018-08-10 11:05:18,473 INFO  [TestNG-PoolService-0] Entered the UserName : Harshgevsprwrqy
+2018-08-10 11:05:18,701 INFO  [TestNG-PoolService-0] Entered the Password: Passw0rd
+2018-08-10 11:05:27,909 INFO  [TestNG-PoolService-0] Clicked signIn button on login page 
+2018-08-10 11:05:33,543 INFO  [TestNG-PoolService-0] Successfully logged into UXP Home Page
+2018-08-10 11:05:33,543 INFO  [TestNG-PoolService-0] Logged in User id:Harshgevsprwrqy& Password:Passw0rd
+2018-08-10 11:05:39,207 INFO  [TestNG-PoolService-0] Clicked on Take Call from Agent Dashboard Page
+2018-08-10 11:05:39,365 INFO  [TestNG-PoolService-0] Selected Brand : ASDA
+2018-08-10 11:05:47,132 INFO  [TestNG-PoolService-0] Search for a Valid policy Number
+2018-08-10 11:05:47,882 INFO  [TestNG-PoolService-0] Entered Policy Number: 6824002
+2018-08-10 11:05:58,336 INFO  [TestNG-PoolService-0] Clicked on Search button
+2018-08-10 11:06:03,350 INFO  [TestNG-PoolService-0] Selecting Valid Contact
+2018-08-10 11:06:03,430 INFO  [TestNG-PoolService-0] Sucessfully searched policy : 6824002 through quick search
+2018-08-10 11:07:02,884 INFO  [TestNG-PoolService-0] Clicked on newly created policy in search policy
+2018-08-10 11:07:10,849 INFO  [TestNG-PoolService-0] Clicked on Passed Verification
+2018-08-10 11:07:16,423 INFO  [TestNG-PoolService-0] Clicked on Manage Policy
+2018-08-10 11:07:23,425 INFO  [TestNG-PoolService-0] Clicked on Mid Term Adjustment
+2018-08-10 11:07:26,148 INFO  [TestNG-PoolService-0] Entered the Date : 10/08/2018
+2018-08-10 11:07:28,397 INFO  [TestNG-PoolService-0] Selected MidTerm Reason : Change contact details
+2018-08-10 11:07:59,345 INFO  [TestNG-PoolService-0] Mid Term Continue button clicked
+2018-08-10 11:08:22,660 INFO  [TestNG-PoolService-0] Home emergency cover added successfully
+2018-08-10 11:08:40,691 INFO  [TestNG-PoolService-0] Clicked on Buy button
+2018-08-10 11:08:45,963 INFO  [TestNG-PoolService-0] Selected menu option: 101
+2018-08-10 11:08:46,191 INFO  [TestNG-PoolService-0] Selected on MTA reason
+2018-08-10 11:08:46,355 INFO  [TestNG-PoolService-0] Clicked on next button in get quote page
+2018-08-10 11:08:49,831 INFO  [TestNG-PoolService-0] Payment reference number :488
+2018-08-10 11:09:48,877 INFO  [TestNG-PoolService-0] Clicked on Confirm button
+2018-08-10 11:09:51,650 INFO  [TestNG-PoolService-0] Navigated to customer dashboard page after MTA is completed
+2018-08-10 11:09:54,641 INFO  [TestNG-PoolService-0] Policy Created Successfully. Policy URN : 6824002, Policy Position : MidTermAdjustment, Policy Status : Accepted
+2018-08-10 11:09:56,647 INFO  [TestNG-PoolService-0] MTA performed succesfully on NB accepted policy
+2018-08-10 11:09:56,798 INFO  [TestNG-PoolService-0] ****             -E---N---D-             *****
+2018-08-10 11:09:56,799 INFO  [TestNG-PoolService-0] Test Passed. 

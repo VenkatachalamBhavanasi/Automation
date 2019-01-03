@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="UXP_HOOD" verbose="3" parallel="methods">
+	<parameter name="securityTest" value="false" />
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="4444" />
+	<parameter name="browserName" value="chrome_windows"></parameter>
+	<parameter name="email" value="${email}"></parameter>
+	<parameter name="createemail" value="createmailj${BUILD_NUMBER}"></parameter>
+	<parameter name="policy_number" value=""></parameter>
+	<parameter name="ZAP_Location"
+		value="C:\\Program Files\\OWASP\\Zed Attack Proxy\\"></parameter>
+	<!-- 
+	<test name="UXP_SS" parallel="methods" thread-count = "1" enabled="true"> 
+		<parameter name="browser" value="chrome"></parameter> 
+		<parameter name="browser_version" value="57"></parameter> 
+		<parameter name="os" value="Windows"></parameter> 
+		<parameter name="os_version" value="10"></parameter> 
+		<parameter name="env" value="UAT"></parameter> 
+		<parameter name="webSite" value="https://hood-test.ssp-hosting.com/HomeInsurance"></parameter> 
+		<classes> <class name="com.ssp.testscripts.smoke.UXP_SS">
+		<methods><include name = "tcHoodSS001"/></methods> 
+		</class> </classes> 
+		</test> -->
+		
+		<!-- <test name="UXP_WJ" parallel="methods" thread-count = "1" enabled="true"> 
+		<parameter name="browser" value="chrome"></parameter> 
+		<parameter name="browser_version" value="57"></parameter> 
+		<parameter name="os" value="Windows"></parameter> 
+		<parameter name="os_version" value="10"></parameter> 
+		<parameter name="env" value="UAT"></parameter> 
+		<parameter name="webSite" value="https://hood-test.ssp-hosting.com/HomeInsurance"></parameter> 
+		<classes> <class name="com.ssp.testscripts.smoke.UXP_WJ">
+		<methods><include name = "tcHoodWJ001"/></methods> 
+		</class> </classes> 
+		</test> -->
+		
+		<test name="UXP_SS" parallel="methods" thread-count = "1" enabled="true"> 
+		<parameter name="browser" value="chrome"></parameter> 
+		<parameter name="browser_version" value="52"></parameter> 
+		<parameter name="os" value="Windows"></parameter> 
+		<parameter name="os_version" value="7"></parameter> 
+		<parameter name="env" value="UAT"></parameter> 
+		<parameter name="webSite" value="https://hood-test.ssp-hosting.com/HomeInsurance"></parameter> 
+		<classes> <class name="com.ssp.Demo.SSP_TICB_Demo">
+		<methods><include name = "TC_01"/></methods>
+		</class> </classes> 
+		</test>
+	
+</suite>

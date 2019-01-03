@@ -1,0 +1,321 @@
+<html>
+<head>
+<title>TestNG:  UXP_EC_SMOKE</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>UXP_EC_SMOKE</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jun 29 11:28:20 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>610 seconds (610126 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ssp.testscripts.smoke.UXP_EC_SMOKE.TC_019()'><b>TC_019</b><br>Test class: com.ssp.testscripts.smoke.UXP_EC_SMOKE<br>Test method: To check that the Terms and Conditions can be viewed from 'Manage Policy --> MTA' for an existing contact<br>Parameters: (Browser: chrome, Hub: IN00217, Node: HTTP://LOCALHOST), chrome_XP<br/>
+<a href="#Output-1708626720" onClick='toggleBox("Output-1708626720", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1708626720" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1708626720">
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">To check that the Terms and Conditions can be viewed from 'Manage Policy --> MTA' for an existing contact<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_019 [UXP_EC_SMOKE]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:24 287 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:24 288 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:34 839 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:34 839 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:34 934 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__QUE_ED508ADA5C44080859323]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:34 952 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:34 952 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;UXP SIAAS Landing Page : https://dr-hood-prod.ssp-hosting.com/SIaaS/&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_1.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:35 711 - Launched SSP site:: https://dr-hood-prod.ssp-hosting.com/SIaaS/</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:35 712 - Login to the SSP</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:35 769 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__QUE_ED508ADA5C44080859323]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the UserName : vchauhan&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:35 957 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: input[name='C2__CONTACTCENTRE[1].LOGIN[1].PASSWORD']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the Password: Passw0rd&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:36 133 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: button[title='LOGIN']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:47 975 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked signIn button on login page &emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:47 977 - <b>11</b> - Clicked signIn button on login page - com.ssp.pages.uxp.LoginPage.clickBtnSignIn(LoginPage.java:237)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:53 019 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:53 066 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:53 066 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:53 113 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:53 113 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:58 184 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:58 334 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: a[data-toggle='dropdown']]</small> </font> </div><br/>
+<div class="test-result"><br><font color="green"><strong> Successfully logged into Home Page </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Successfully logged into Home Page&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_3.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:28:59 572 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: a[title='Take Call']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:06 281 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Take Call from Agent Dashboard Page&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:06 376 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: img[alt='Asda Business Unit ']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Selected Brand : ASDA&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:06 464 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:06 464 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:15 963 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:16 028 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:16 029 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:16 126 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: input[placeholder='Policy Number']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:16 193 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: input[placeholder='Policy Number']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:29:16 194 - All elements checked on this page:: [txtPolicyNumber]</small> </font> </div><br/>
+<div class="test-result"><br><font color="green"><strong> Search Page Verified </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Search Page Verified&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_5.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:28 332 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Create Customer Button from Search page</div><br/>
+<div class="test-message">&emsp;Entering Customer details</div><br/>
+<div class="test-message">&emsp;Title Selected: Mr</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:34 824 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:39 875 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Title : Mr</div><br/>
+<div class="test-message">&emsp;Entered the First Name: oymoq</div><br/>
+<div class="test-message">&emsp;First Name : oymoq</div><br/>
+<div class="test-message">&emsp;Entered the Last Name: gokl</div><br/>
+<div class="test-message">&emsp;Last Name : gokl</div><br/>
+<div class="test-message">&emsp;Entered the Date of Birth: 02/03/1990</div><br/>
+<div class="test-message">&emsp;Date of Birth : 02/03/1990</div><br/>
+<div class="test-message">&emsp;Selected Gender :Male</div><br/>
+<div class="test-message">&emsp;Gender : Male</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:45 664 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:45 827 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: input[name*='PERSONAL'][name*='POSTCODE']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:51 012 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Entered the PostCode: GU111PZ</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:56 876 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Find Address</div><br/>
+<div class="test-message">&emsp;Post Code : GU111PZ</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:59 181 - Unable to find a element after[[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: select[name*='PERSONAL'][name*='ADDRESSLIST']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:59 267 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C1__QUE_B5F37DDFDCE76BB21217370]</small> </font> </div><br/>
+<div class="test-message">&emsp;Address 1 Royal Pavilion</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:59 394 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C1__QUE_B5F37DDFDCE76BB21217372]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:30:59 494 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C1__QUE_B5F37DDFDCE76BB21217374]</small> </font> </div><br/>
+<div class="test-message">&emsp;Phone Number is entered 07328554450</div><br/>
+<div class="test-message">&emsp;Home Phone : 07328554450</div><br/>
+<div class="test-message">&emsp;Email : cbttestone290618113059EC@test.com</div><br/>
+<div class="test-message">&emsp;Sucessfully entered the Customer details&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_6.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:05 944 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Save customer&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_7.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:35 468 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:35 516 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:35 516 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:35 589 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: a[id*='BUT_58CF1F8E16D428CA38036'][title='Edit Details']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Searched Contact Equals the created contact : Mr oymoq gokl
+&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_8.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:36 319 - Verified the name of the Searched Contact</small> </font> </div><br/>
+<div class="test-result"><br><font color="green"><strong> Verified FirstName and LastName on Customer Dashboard page </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Verified FirstName and LastName on Customer Dashboard page&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_10.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:44 649 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on New Quote button&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_11.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Entering Quote details</div><br/>
+<div class="test-message">&emsp;Entered Date : 29/06/2018</div><br/>
+<div class="test-message">&emsp;Intermediary Selected: 103&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_12.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Entered Intermediary : 103</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:46 953 - Product Selected: HHMOD</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:51 987 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Selected product : HHMOD</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:58 262 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:31:58 263 - Scheme Selected: HHMOD_ASDA</small> </font> </div><br/>
+<div class="test-message">&emsp;Selected scheme : HHMOD_ASDA</div><br/>
+<div class="test-message">&emsp;Entered Quote Details successfully&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_13.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:32:10 745 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Continue button&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_14.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:32:12 223 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: [title='Back to Dashboard']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Navigated to New Quote page&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_15.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="green"><strong> Verified NewQuotePage  </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Verified NewQuotePage &emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_17.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:32:15 784 - Entering Policy Details</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:33:06 288 - Unable to find a element after[[[[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: div[id*='QUE_15D8DD38C9D9D4FD208240']>div>fieldset>div]] -> css selector: input]</small> </font> </div><br/>
+<div class="test-message">&emsp;Selected Cover :Buildings</div><br/>
+<div class="test-message">&emsp;Cover Chosen : Buildings</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:33:06 453 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__QUE_F7F54EFB71FFA51524509]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:33:06 599 - Number of Bedrooms Selected : 2</small> </font> </div><br/>
+<div class="test-message">&emsp;No of bedrooms :2</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:33:06 684 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: input[name*='YEAROFBUILD']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Year of Build : 1990</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:33:09 099 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: select[name*='PROPERTYTYPE']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:33:09 303 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: button[id*='BUT_15D8DD38C9D9D4FD403269']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:33:09 303 - Property Selected : 02</small> </font> </div><br/>
+<div class="test-message">&emsp;Property Type chosen : 02</div><br/>
+<div class="test-message">&emsp;Successfully entered Policy details&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_18.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Clicked on Next button</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:33:19 442 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:33:24 496 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;cover : Buildings</div><br/>
+<div class="test-message">&emsp;else</div><br/>
+<div class="test-message">&emsp;Entering customer details for Buildings corecover</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:14 880 - Unable to find a element after[[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: select[name*='CONTENTSINSURANCEHELD']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:15 038 - Buildings insurance held years entered : 2</small> </font> </div><br/>
+<div class="test-message">&emsp;No</div><br/>
+<div class="test-message">&emsp;label[for*='QUE_F7F54EFB71FFA51525068']>span</div><br/>
+<div class="test-message">&emsp;for</div><br/>
+<div class="test-message">&emsp;for inside</div><br/>
+<div class="test-message">&emsp;for inside</div><br/>
+<div class="test-message">&emsp;click</div><br/>
+<div class="test-message">&emsp;clicked</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:15 158 - Selected Cover :No</small> </font> </div><br/>
+<div class="test-message">&emsp;Successfully entered customer details for Buildings corecover&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_19.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:20 839 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Next button</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:27 075 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:27 286 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:27 286 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:32 332 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on View Button&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:37 371 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:37 499 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: button[id*='save-declaration']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:37 577 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__p4_QUE_921BCE84FE9FC3B2469614 div:nth-child(1) > label[for='C2__QUE_921BCE84FE9FC3B2469614_0']]</small> </font> </div><br/>
+<div class="test-message">&emsp;#C2__p4_QUE_921BCE84FE9FC3B2469614 div:nth-child(1) > label[for='C2__QUE_921BCE84FE9FC3B2469614_0']</div><br/>
+<div class="test-message">&emsp;for</div><br/>
+<div class="test-message">&emsp;for inside</div><br/>
+<div class="test-message">&emsp;click</div><br/>
+<div class="test-message">&emsp;clicked</div><br/>
+<div class="test-message">&emsp;Selected Agreement Statement : Customer agrees</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:43 837 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Save Button</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:34:43 977 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__BUT_F9236B9689BADD9D689570]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:00 191 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:00 243 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:00 244 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:00 380 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: div[id='C2__TXT_728A190A04653942818940'] div span]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Get Quote button sucessfully&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_20.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:06 612 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on home emergency add button&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_21.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:14 257 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:19 324 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:24 440 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:29 678 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:37 905 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Policy is upgraded to schemeASDA</div><br/>
+<div class="test-result"><br><font color="green"><strong> Policy upgraded to 5 star </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Policy upgraded to 5 star&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_23.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:40 506 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: button[id='C2__BUT-RE-CALCULATE']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:53 493 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Re-Calculate&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:35:53 667 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__BUT_2BF7614AC3E22D7C1441352[title='Buy']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Buy Quote button&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_24.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:36:09 204 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:36:09 348 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__FMT_644A45EDEAA7BED1147820]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on customer prefrence Next button</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:36:15 612 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Next button</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:36:21 396 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:36:21 550 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: select[name*='PAYMENTPLAN']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Annual Payment Plan - payment Plan Option is selected&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_25.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:36:28 584 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:36:28 686 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: select[name*='PAYMENTMETHOD']]</small> </font> </div><br/>
+<div class="test-message">&emsp;Card - payment Method Option is selected&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_26.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:36:35 656 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:36:40 732 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:03 346 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Cofirm payment button clicked succuessfully</div><br/>
+<div class="test-message">&emsp;Clicked on 'Confirm payment' button</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:08 471 - Page URL:: https://dr-hood-prod.ssp-hosting.com/siaas/servletcontroller</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:08 472 - Page Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:08 547 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: a[id*='BUT_58CF1F8E16D428CA38036'][title='Edit Details']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:08 624 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: a[id*='BUT_58CF1F8E16D428CA38036'][title='Edit Details']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:08 625 - All elements checked on this page:: [lnkEditDetails]</small> </font> </div><br/>
+<div class="test-result"><br><font color="green"><strong> Customer Dashboard page is verified </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;Customer Dashboard page is verified&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_28.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:12 214 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C4__TBL_3B87415692E0F10617428 tbody tr:nth-child(1) td:not([class*='hidden'])]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:12 290 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C4__TBL_3B87415692E0F10617428 tbody tr:nth-child(1) td:not([class*='hidden'])]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:12 364 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C4__TBL_3B87415692E0F10617428 tbody tr:nth-child(1) td:not([class*='hidden'])]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:12 423 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C4__TBL_3B87415692E0F10617428 tbody tr:nth-child(1) td:not([class*='hidden'])]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:12 496 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C4__TBL_3B87415692E0F10617428 tbody tr:nth-child(1) td:not([class*='hidden'])]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:12 544 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C4__TBL_3B87415692E0F10617428 tbody tr:nth-child(1) td:not([class*='hidden'])]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:12 624 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C4__TBL_3B87415692E0F10617428 tbody tr:nth-child(1) td:not([class*='hidden'])]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:12 698 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C4__TBL_3B87415692E0F10617428 tbody tr:nth-child(1) td:not([class*='hidden'])]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:12 732 - Policy URN : 9300427</small> </font> </div><br/>
+<div class="test-message">&emsp;Policy Created Successfully. Policy URN : 9300427, Policy Position : NewBusiness, Policy Status : Accepted&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_29.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;NB Policy Created Successfully in accepted status</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:14 435 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C6__ITM_32BF5DA7372009F11482890 > a]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Manage Policy&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:19 841 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #date-picker-C2__C6__QUE_4F6C7E1EA3A0DE0E1111397]</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Mid Term Adjustment&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_30.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-message">&emsp;Entered the Date : 29/06/2018&emsp;</div><br/>
+<div class="test-message">&emsp;Selected MidTerm Reason : Add-Remove-Change Contents&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:26 094 - Element is displayed:: [[RemoteWebDriver: chrome on XP (1104a5a046eb0fe33052b8b2440516b7)] -> css selector: #C2__C6__BUT_4F6C7E1EA3A0DE0E1111409]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:45 571 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Mid Term Continue button clicked&emsp;</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:37:50 629 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:38:06 747 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Acceptance Tab&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_31.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:38:12 651 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on Terms and Condition Section</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:38:19 554 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on button - Attach Term and Condition</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:38:24 741 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 29 Jun 11:38:29 877 - Spinner Load Wait: (Sync)</small> </font> </div><br/>
+<div class="test-message">&emsp;Clicked on first Term and Condition&emsp;</div><br/>
+<div class="test-message">&emsp;Terms and Conditions : This endorsement applies to the personal belongings section of your policy.  An excess of £150, in addition to the amount of any excess shown on your schedule, applies to each and every claim. All policy limits, section limits, conditions, exclusions and the "What is not covered" paragraphs of each section  apply except where they have been changed by this endorsement.</div><br/>
+<div class="test-result"><br><font color="green"><strong> Verified Edit Terms and Conditions&emsp;<a href=".\ScreenShot\TC_019_UXP_EC_SMOKE_32.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;<br/>
+</div>
+</td>
+<td></td>
+<td>606</td>
+<td>com.ssp.testscripts.smoke.UXP_EC_SMOKE@1d7acb34</td></tr>
+</table><p>
+</body>
+</html>

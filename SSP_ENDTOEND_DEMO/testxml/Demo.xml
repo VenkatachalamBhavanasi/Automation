@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="UXP_HOOD" verbose="3" parallel="methods">
+	<parameter name="securityTest" value="false" />
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="4444" />
+	<parameter name="browserName" value="${browser}_windows" ></parameter>
+	<parameter name="email" value="${email}" ></parameter>
+	<parameter name="createemail" value="createmailj${BUILD_NUMBER}" ></parameter>
+	<parameter name="policy_number" value="" ></parameter>
+	<parameter name="ZAP_Location"
+		value="C:\\Program Files\\OWASP\\Zed Attack Proxy\\" ></parameter>	
+	<test name="UXP_WJ" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="${browser}"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value="${site}"></parameter>
+		<parameter name="webSite" value="https://hood-test.ssp-hosting.com/HomeInsurance"> </parameter> 
+		<classes>
+            <class name="com.ssp.Demo.SSP_TICB_Demo">   
+            </class>                      
+        </classes>
+    </test> 
+</suite>

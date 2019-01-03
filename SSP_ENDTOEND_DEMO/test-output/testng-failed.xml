@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [UXP_HOOD]" parallel="methods">
+  <parameter name="ZAP_Location" value="C:\\Program Files\\OWASP\\Zed Attack Proxy\\"/>
+  <parameter name="deviceHost" value="localhost"/>
+  <parameter name="policy_number" value=""/>
+  <parameter name="createemail" value="createmailj${BUILD_NUMBER}"/>
+  <parameter name="devicePort" value="4444"/>
+  <parameter name="browserName" value="chrome_windows"/>
+  <parameter name="securityTest" value="false"/>
+  <parameter name="email" value="${email}"/>
+  <test thread-count="5" verbose="3" name="UXP_SS(failed)" parallel="methods">
+    <parameter name="webSite" value="https://hood-test.ssp-hosting.com/HomeInsurance"/>
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="os_version" value="7"/>
+    <parameter name="browser_version" value="52"/>
+    <parameter name="env" value="UAT"/>
+    <classes>
+      <class name="com.ssp.Demo.SSP_TICB_Demo">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="init"/>
+          <include name="TC_01" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.ssp.Demo.SSP_TICB_Demo -->
+    </classes>
+  </test> <!-- UXP_SS(failed) -->
+</suite> <!-- Failed suite [UXP_HOOD] -->

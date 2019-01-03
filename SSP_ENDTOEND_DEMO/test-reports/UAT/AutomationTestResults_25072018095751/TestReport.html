@@ -1,0 +1,1068 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+			ExtentReports Library 2.41.1 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
+			Copyright (c) 2015, Anshoo Arora (Relevant Codes) | Copyrights licensed under the New BSD License | http://opensource.org/licenses/BSD-3-Clause
+			Documentation: http://extentreports.relevantcodes.com 
+		-->
+
+		<meta charset='UTF-8' /> 
+		<meta name='description' content='ExtentReports (by Anshoo Arora) is a reporting library for automation testing for .NET and Java. It creates detailed and beautiful HTML reports for modern browsers. ExtentReports shows test and step summary along with dashboards, system and environment details for quick analysis of your tests.' />
+		<meta name='robots' content='noodp, noydir' />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<meta name='extentx' id='extentx' content='' />
+		
+		<title>
+				ExtentReports 2.0
+		</title>
+		
+		
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports/6032d73243ba4fe4fb8769eb9c315d4fdf16fe68/cdn/extent.css' type='text/css' rel='stylesheet' />
+		
+		<style>
+				
+            
+                
+            
+        
+		</style>
+	</head>
+	
+	
+	<body class='extent default standard hide-overflow'>
+		<!-- nav -->
+		<nav>
+			<div class='logo-container blue darken-2'>
+				<a class='logo-content' href='http://extentreports.relevantcodes.com'>
+					<span>ExtentReports</span>
+				</a>
+				<a href='#' data-activates='slide-out' class='button-collapse hide-on-large-only'><i class='mdi-navigation-apps'></i></a>
+			</div>
+			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+					<li class='analysis waves-effect'><a href='#!' class='categories-view' onclick="_updateCurrentStage(1)"><i class='mdi-maps-local-offer'></i>Categories</a></li>
+				<li class='analysis waves-effect'>
+					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
+				</li>
+			</ul>
+			<span class='report-name'>Automation Report</span> <span class='report-headline'></span>
+			<ul class='right hide-on-med-and-down nav-right'>
+				<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
+					<i class='mdi-hardware-desktop-windows'></i>
+				</li>
+				<li>
+					<span class='suite-started-time'>2018-07-25 21:57:51</span>
+				</li>
+				<li>
+					<span>v2.41.1</span>
+				</li>
+			</ul>
+		</nav>
+		<!-- /nav -->
+		
+		<!-- container -->
+		<div class='container'>
+			
+			<!-- dashboard -->
+			<div id='dashboard-view' class='row'>
+				<div class='time-totals'>
+					<div class='col l2 m4 s6'>
+						<div class='card suite-total-tests'> 
+							<span class='panel-name'>Total Tests</span> 
+							<span class='total-tests'> <span class='panel-lead'></span> </span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s6'>
+						<div class='card suite-total-steps'> 
+							<span class='panel-name'>Total Steps</span> 
+							<span class='total-steps'> <span class='panel-lead'></span> </span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s12'>
+						<div class='card suite-total-time-current'> 
+							<span class='panel-name'>Total Time Taken (Current Run)</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 7m 9s+870ms</span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s12'>
+						<div class='card suite-total-time-overall'> 
+							<span class='panel-name'>Total Time Taken (Overall)</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 7m 9s+870ms</span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s6 suite-start-time'>
+						<div class='card accent green-accent'> 
+							<span class='panel-name'>Start</span> 
+							<span class='panel-lead suite-started-time'>2018-07-25 21:50:41</span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s6 suite-end-time'>
+						<div class='card accent pink-accent'> 
+							<span class='panel-name'>End</span> 
+							<span class='panel-lead suite-ended-time'>2018-07-25 21:57:51</span> 
+						</div> 
+					</div>
+				</div>
+				<div class='charts'>
+					<div class='col s12 m6 l4 fh'> 
+						<div class='card-panel'> 
+							<div>
+								<span class='panel-name'>Tests View</span>
+							</div> 
+							<div class='panel-setting modal-trigger test-count-setting right'>
+								<a href='#test-count-setting'><i class='mdi-navigation-more-vert text-md'></i></a>
+							</div> 
+							<div class='chart-box'>
+								<canvas class='text-centered' id='test-analysis'></canvas>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='t-pass-count weight-normal'></span> test(s) passed</span>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='t-fail-count weight-normal'></span> test(s) failed, <span class='t-others-count weight-normal'></span> others</span>
+							</div> 
+						</div> 
+					</div> 
+					<div class='col s12 m6 l4 fh'> 
+						<div class='card-panel'> 
+							<div>
+								<span class='panel-name'>Steps View</span>
+							</div> 
+							<div class='panel-setting modal-trigger step-status-filter right'>
+								<a href='#step-status-filter'><i class='mdi-navigation-more-vert text-md'></i></a>
+							</div> 
+							<div class='chart-box'>
+								<canvas class='text-centered' id='step-analysis'></canvas>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='s-pass-count weight-normal'></span> step(s) passed </span>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='s-fail-count weight-normal'></span> step(s) failed, <span class='s-others-count weight-normal'></span> others</span>
+							</div> 
+						</div> 
+					</div>
+					<div class='col s12 m12 l4 fh'> 
+						<div class='card-panel'> 
+							<span class='panel-name'>Pass Percentage</span> 
+							<span class='pass-percentage panel-lead'></span> 
+							<div class='progress light-blue lighten-3'> 
+								<div class='determinate light-blue'></div> 
+							</div> 
+						</div> 
+					</div>
+				</div>
+				<div class='system-view'>
+					<div class='col l4 m12 s12'>
+						<div class='card-panel'>
+							<span class='label info outline right'>Environment</span>
+							<table>
+								<thead>
+									<tr>
+										<th>Param</th>
+										<th>Value</th>
+									</tr>
+								</thead>
+								<tbody>
+										<tr>
+											<td>User Name</td>
+											<td>harsh.kumar</td>
+										</tr>
+										<tr>
+											<td>OS</td>
+											<td>Windows 10</td>
+										</tr>
+										<tr>
+											<td>Java Version</td>
+											<td>1.8.0_171</td>
+										</tr>
+										<tr>
+											<td>Host Name</td>
+											<td>Aspirenav207</td>
+										</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+					<div class='category-summary-view'>
+						<div class='col l4 m6 s12'>
+							<div class='card-panel'>
+								<span class='label info outline right'>Categories</span>
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr>
+												<td>
+													UXP_SS
+												</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+			</div>
+			<!-- /dashboard -->
+			
+			<!-- tests -->
+			<div id='test-view' class='row _addedTable'>
+				<div class='col _addedCell1'>
+					<div class='contents'>
+						<div class='card-panel heading'>
+							<h5>Tests</h5>
+						</div>
+						<div class='card-panel filters'>
+							<div>
+								<a class='dropdown-button btn-floating btn-small waves-effect waves-light grey tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+									<i class='mdi-action-reorder'></i>
+								</a>
+								<ul id='tests-toggle' class='dropdown-content'>
+									<li class='pass'><a href='#!'>Pass</a></li>
+									<li class='fail'><a href='#!'>Fail</a></li>
+									<li class='skip'><a href='#!'>Skip</a></li>
+									<li class='divider'></li>
+									<li class='clear'><a href='#!'>Clear Filters</a></li>
+								</ul>
+							</div>
+								<div>
+									<a class='dropdown-button btn-floating btn-small waves-effect waves-light grey category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+										<i class='mdi-maps-local-offer'></i>
+									</a>
+									<ul id='category-toggle' class='dropdown-content'>
+											<li class='UXP_SS'><a href='#!'>UXP_SS</a></li>
+										<li class='divider'></li>
+										<li class='clear'><a href='#!'>Clear Filters</a></li>
+									</ul>
+								</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light grey' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+									<i class='mdi-navigation-close'></i>
+								</a>
+							</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light grey' id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+									<i class='mdi-action-track-changes'></i>
+								</a>
+							</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light blue enabled' id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters'>
+									<i class='mdi-navigation-refresh'></i>
+								</a>
+							</div>
+							<div class='search' alt='Search Tests' title='Search Tests'>
+								<div class='input-field left'>
+									<input id='searchTests' type='text' class='validate' placeholder='Search Tests...'>
+								</div>
+								<a href="#" class='btn-floating btn-small waves-effect waves-light grey'>
+									<i class='mdi-action-search'></i>
+								</a>
+							</div>
+						</div>
+						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
+							<div class='wrapper'>
+								<ul id='test-collection' class='test-collection'>
+										<li class='collection-item test displayed active pass ' extentid='0ed542bb-0984-43ec-ade0-97aa99018392'>
+											<div class='test-head'>
+												<span class='test-name'>TC_01 - Create 3* annual in WJ - Store customer details in CustomerInfo desktop application - Verifying policy details in Self-service - Enabling credentials through SoapUI - Performing MTA to add additonal cover [W7_chrome52] </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide  uxp_ss'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-07-25 21:50:45</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-07-25 21:50:45</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+3ms</span>
+												</div>
+												<div class='test-desc'>TC_01 [UXP_SS]</div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>UXP_SS</span>
+														</div>
+														<div class='authors'>
+																<span class='author text-white'>UXP-EC-MTA</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:50:56</td>
+																	<td class='step-details'>Entered address of the customer with postcode : GU111PZ</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:50:56</td>
+																	<td class='step-details'>Selected Cover Type : Buildings and Contents</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:50:56</td>
+																	<td class='step-details'>Entered year of Build : 2001</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:50:56</td>
+																	<td class='step-details'>Selected number of Bedrooms : 2</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:50:56</td>
+																	<td class='step-details'>Selected number of Bedrooms : Detached House</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:50:57</td>
+																	<td class='step-details'>Selected title : Mr</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:50:57</td>
+																	<td class='step-details'>Entered first name : Ramesh</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:50:58</td>
+																	<td class='step-details'>Entered Last Name :Sharma</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:00</td>
+																	<td class='step-details'>SelectedDate of Birth : 01-May-1990</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:00</td>
+																	<td class='step-details'>Number of years Building Insurance Held : 0</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:00</td>
+																	<td class='step-details'>Number of years Content Insurance Held : 0</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:01</td>
+																	<td class='step-details'>Select Join policy Holder ?No</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:01</td>
+																	<td class='step-details'>Previous Claims Made ? No</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:01</td>
+																	<td class='step-details'>Personal Items? No</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:01</td>
+																	<td class='step-details'>Bicycle?No</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:01</td>
+																	<td class='step-details'>High Risk Items?No</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:01</td>
+																	<td class='step-details'>Have any promo code?No</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:04</td>
+																	<td class='step-details'>Data entered in the Quote Page&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_1.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:16</td>
+																	<td class='step-details'>Details entered and clicked on Get Quote</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:18</td>
+																	<td class='step-details'>Clicked on Summary Button&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_2.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:18</td>
+																	<td class='step-details'>Navigating to Summary Page</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:19</td>
+																	<td class='step-details'>Confirm Agreement Statement</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:19</td>
+																	<td class='step-details'>Data entered in Summary Page</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:20</td>
+																	<td class='step-details'>Navigating to Payment Page</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:22</td>
+																	<td class='step-details'>Entering Email Address:ramesh.sharma@hguat.com</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:23</td>
+																	<td class='step-details'>Confirming Email Address: ramesh.sharma@hguat.com</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:23</td>
+																	<td class='step-details'>Entering Phone number :07328554450</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:24</td>
+																	<td class='step-details'>Selected Payment MethodAnnual</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:24</td>
+																	<td class='step-details'>Change Billing Address : No</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:25</td>
+																	<td class='step-details'>Clicking on Confirmation Button&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_3.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:47</td>
+																	<td class='step-details'>Navigating to Sage Pay Page</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:47</td>
+																	<td class='step-details'>Entering Card Number : 4929000000006</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:47</td>
+																	<td class='step-details'>Selecting Expiry Month : 7</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:47</td>
+																	<td class='step-details'>Selecting Expiry Year : 19</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:47</td>
+																	<td class='step-details'>Selecting Expiry Year : 234</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:48</td>
+																	<td class='step-details'>Data Entered in Sagepay page&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_5.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:48</td>
+																	<td class='step-details'>Navigate to SagePay Confirmation Page</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:56</td>
+																	<td class='step-details'>Navigating to Thank You Page</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:51:57</td>
+																	<td class='step-details'>Created Quote Successfully, HD-ASD-6823757&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_6.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:57</td>
+																	<td class='step-details'>Calling AutoIt scripts !!!</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:57</td>
+																	<td class='step-details'>Storing customer data in to Desktop applicatin using AutoIt scripts</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:51:57</td>
+																	<td class='step-details'>customer details entered succesfully in to Desktop applicatin using AutoIt scripts</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:52:02</td>
+																	<td class='step-details'>Self Service Home Page Loaded successfully!!</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:52:02</td>
+																	<td class='step-details'>Clicked on SignIn Link!!</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:52:04</td>
+																	<td class='step-details'>Navigated to Login Page Successfully!!</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:52:04</td>
+																	<td class='step-details'>Entered Email id :ramesh.sharma@hguat.com</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:52:04</td>
+																	<td class='step-details'>Entered Password: Passw0rd</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:52:56</td>
+																	<td class='step-details'>Logged into Self Service Application and Verified Name of the customer!</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:52:56</td>
+																	<td class='step-details'>The recently created policy annual does exist in the Customer Dashboard</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:02</td>
+																	<td class='step-details'>Navigated to your details page successfully</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:53:04</td>
+																	<td class='step-details'>Created annual policy in WJ and Verified the presence on SS in detail successfully&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_7.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:04</td>
+																	<td class='step-details'>Calling SOAP services</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:06</td>
+																	<td class='step-details'>Create Person SoapUI response<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <stn_1:response xmlns:stn_1="urn:PersonSave">
+         <stn_1:objectIdentity>1011273</stn_1:objectIdentity>
+      </stn_1:response>
+   </soapenv:Body>
+</soapenv:Envelope></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:07</td>
+																	<td class='step-details'>Save System User SoapUI response<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <stn_1:systemUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stn_1="urn:SystemUserSave">
+         <stn_1:objectIdentity>1035697</stn_1:objectIdentity>
+         <stn_1:roleType>System User</stn_1:roleType>
+         <stn_1:uniqueReference>1009171</stn_1:uniqueReference>
+         <stn_1:dateCreated>2018-07-25+01:00</stn_1:dateCreated>
+         <stn_1:statusDate>2018-07-25+01:00</stn_1:statusDate>
+         <stn_1:status>Authorised</stn_1:status>
+         <stn_1:terminationReason xsi:nil="true"/>
+         <stn_1:contactIdentity>1011273</stn_1:contactIdentity>
+         <stn_1:contactEffectiveDate xsi:nil="true"/>
+         <stn_1:contactType>Person</stn_1:contactType>
+         <stn_1:contactUniqueReference>1009177</stn_1:contactUniqueReference>
+         <stn_1:effectiveDate>2018-07-25T17:23:07.190+01:00</stn_1:effectiveDate>
+         <stn_1:previousEffectiveDate xsi:nil="true"/>
+         <stn_1:typeName>SystemUser</stn_1:typeName>
+         <stn_1:hasAttachments>0</stn_1:hasAttachments>
+         <stn_1:principal>
+            <stn_1:typeName>Principal</stn_1:typeName>
+            <stn_1:objectIdentity>1006318</stn_1:objectIdentity>
+            <stn_1:principalID>Harshhkqscwqqfe</stn_1:principalID>
+            <stn_1:principalName>Harshhkqsc testerhnlkq</stn_1:principalName>
+            <stn_1:contactID>1011273</stn_1:contactID>
+            <stn_1:isExternalUser>false</stn_1:isExternalUser>
+            <stn_1:effectiveDate xsi:nil="true"/>
+            <stn_1:principalRules>
+               <stn_1:typeName>PrincipalRules</stn_1:typeName>
+               <stn_1:objectIdentity xsi:nil="true"/>
+               <stn_1:startingDate>2018-07-25+01:00</stn_1:startingDate>
+               <stn_1:endDate xsi:nil="true"/>
+               <stn_1:userCanChange>true</stn_1:userCanChange>
+               <stn_1:userMustChange>false</stn_1:userMustChange>
+               <stn_1:expires>true</stn_1:expires>
+               <stn_1:unlockAccount>false</stn_1:unlockAccount>
+               <stn_1:passwordReset>false</stn_1:passwordReset>
+               <stn_1:memorableWordApplies>false</stn_1:memorableWordApplies>
+               <stn_1:memorableWord xsi:nil="true"/>
+               <stn_1:jaasServerId>1</stn_1:jaasServerId>
+               <stn_1:temporaryPassword>Passw0rd</stn_1:temporaryPassword>
+            </stn_1:principalRules>
+            <stn_1:principalPreferences>
+               <stn_1:typeName>PrincipalPreferences</stn_1:typeName>
+               <stn_1:principalPreferencesIdentity xsi:nil="true"/>
+               <stn_1:languageCode>English</stn_1:languageCode>
+               <stn_1:countryCode>GB</stn_1:countryCode>
+               <stn_1:principalName>Harshhkqsc testerhnlkq</stn_1:principalName>
+               <stn_1:systemDateFormat>dd/MM/yyyy</stn_1:systemDateFormat>
+            </stn_1:principalPreferences>
+         </stn_1:principal>
+      </stn_1:systemUser>
+   </soapenv:Body>
+</soapenv:Envelope></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:07</td>
+																	<td class='step-details'>Credentials created through SOAPUI- UserName: 1011273 Password: Passw0rd</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:07</td>
+																	<td class='step-details'>Underwriter Save SoapUI response<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <stn_1:personnel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stn_1="urn:PersonnelRetrieve_v2">
+         <stn_1:status>1</stn_1:status>
+         <stn_1:terminationReason xsi:nil="true"/>
+         <stn_1:roleType>trader</stn_1:roleType>
+         <stn_1:objectIdentity>1035698</stn_1:objectIdentity>
+         <stn_1:uniqueReference>1009172</stn_1:uniqueReference>
+         <stn_1:contactIdentity>1011273</stn_1:contactIdentity>
+         <stn_1:contactEffectiveDate xsi:nil="true"/>
+         <stn_1:contactType>Person</stn_1:contactType>
+         <stn_1:typeName>Personnel</stn_1:typeName>
+         <stn_1:hasAttachments>0</stn_1:hasAttachments>
+         <stn_1:statusDate>2018-07-25+01:00</stn_1:statusDate>
+         <stn_1:effectiveDate>2018-07-25T17:23:07.542+01:00</stn_1:effectiveDate>
+         <stn_1:previousEffectiveDate xsi:nil="true"/>
+         <stn_1:dateCreated>2018-07-25+01:00</stn_1:dateCreated>
+         <stn_1:contactUniqueReference>1009177</stn_1:contactUniqueReference>
+         <stn_1:jobTitle>UW</stn_1:jobTitle>
+         <stn_1:defaultLocale>2</stn_1:defaultLocale>
+         <stn_1:currency>GBP</stn_1:currency>
+         <stn_1:businessUnit>
+            <stn_1:address>1st Floor Maitland House
+Warrior Square
+Essex
+1st Floor Maitland House
+Warrior Square
+Southend-On-Sea
+Essex
+SS1 2JY</stn_1:address>
+            <stn_1:contactTypeName>Company</stn_1:contactTypeName>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>1</stn_1:forUpdate>
+            <stn_1:objectIdentity>53</stn_1:objectIdentity>
+            <stn_1:description xsi:nil="true"/>
+            <stn_1:name>Asda Business Unit</stn_1:name>
+            <stn_1:roleType>Business Unit</stn_1:roleType>
+            <stn_1:typeName>BusinessUnit</stn_1:typeName>
+            <stn_1:uniqueReference>4</stn_1:uniqueReference>
+         </stn_1:businessUnit>
+         <stn_1:defaultAssociation>
+            <stn_1:address xsi:nil="true"/>
+            <stn_1:contactTypeName xsi:nil="true"/>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>1</stn_1:forUpdate>
+            <stn_1:objectIdentity xsi:nil="true"/>
+            <stn_1:name xsi:nil="true"/>
+            <stn_1:roleType>Association</stn_1:roleType>
+            <stn_1:typeName>Intermediary</stn_1:typeName>
+            <stn_1:uniqueReference xsi:nil="true"/>
+         </stn_1:defaultAssociation>
+         <stn_1:defaultIntermediary>
+            <stn_1:address xsi:nil="true"/>
+            <stn_1:contactTypeName xsi:nil="true"/>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>1</stn_1:forUpdate>
+            <stn_1:objectIdentity xsi:nil="true"/>
+            <stn_1:name xsi:nil="true"/>
+            <stn_1:roleType>Intermediary</stn_1:roleType>
+            <stn_1:typeName>Intermediary</stn_1:typeName>
+            <stn_1:uniqueReference xsi:nil="true"/>
+         </stn_1:defaultIntermediary>
+         <stn_1:supervisor>
+            <stn_1:address xsi:nil="true"/>
+            <stn_1:contactTypeName xsi:nil="true"/>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>1</stn_1:forUpdate>
+            <stn_1:objectIdentity xsi:nil="true"/>
+            <stn_1:name xsi:nil="true"/>
+            <stn_1:roleType>Underwriter</stn_1:roleType>
+            <stn_1:typeName>Personnel</stn_1:typeName>
+            <stn_1:uniqueReference xsi:nil="true"/>
+         </stn_1:supervisor>
+         <stn_1:organisationBankAccount>
+            <stn_1:typeName>BankAccount</stn_1:typeName>
+            <stn_1:reference>3881502</stn_1:reference>
+            <stn_1:name>Hood Group Asda A/C</stn_1:name>
+            <stn_1:description>Asda Insurance</stn_1:description>
+            <stn_1:inRef>654321</stn_1:inRef>
+            <stn_1:extension xsi:nil="true"/>
+            <stn_1:orgBankRoleUrn xsi:nil="true"/>
+            <stn_1:contactUrn xsi:nil="true"/>
+            <stn_1:bsbCode>309784</stn_1:bsbCode>
+            <stn_1:currency>GBP</stn_1:currency>
+            <stn_1:delete>0</stn_1:delete>
+            <stn_1:forUpdate>0</stn_1:forUpdate>
+            <stn_1:objectIdentity>2</stn_1:objectIdentity>
+         </stn_1:organisationBankAccount>
+         <stn_1:principal>
+            <stn_1:objectIdentity xsi:nil="true"/>
+            <stn_1:typeName>Principal</stn_1:typeName>
+            <stn_1:accessProfiles/>
+            <stn_1:skillProfiles/>
+         </stn_1:principal>
+         <stn_1:businessUnitProfile>
+            <stn_1:objectIdentity>3</stn_1:objectIdentity>
+            <stn_1:name>All Business Units</stn_1:name>
+            <stn_1:typeName>BusinessUnitProfile</stn_1:typeName>
+         </stn_1:businessUnitProfile>
+      </stn_1:personnel>
+   </soapenv:Body>
+</soapenv:Envelope></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:12</td>
+																	<td class='step-details'>Engagement Centre Landing Page : https://hood-test.ssp-hosting.com/SIaaS&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_8.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:12</td>
+																	<td class='step-details'>Entered the UserName : Harshhkqscwqqfe</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:12</td>
+																	<td class='step-details'>Entered the Password: Passw0rd</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:21</td>
+																	<td class='step-details'>Clicked signIn button on login page</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:26</td>
+																	<td class='step-details'>Successfully logged into UXP Home Page&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_9.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:26</td>
+																	<td class='step-details'>Logged in User id:Harshhkqscwqqfe& Password:Passw0rd</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:32</td>
+																	<td class='step-details'>Clicked on Take Call from Agent Dashboard Page</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:32</td>
+																	<td class='step-details'>Selected Brand : ASDA</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:40</td>
+																	<td class='step-details'>Search for a Valid policy Number</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:40</td>
+																	<td class='step-details'>Entered Policy Number: 6823757&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_10.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:48</td>
+																	<td class='step-details'>Clicked on Search button&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_11.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:53:53</td>
+																	<td class='step-details'>Sucessfully searched policy : 6823757 through quick search</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:54:55</td>
+																	<td class='step-details'>Clicked on newly created policy in search policy&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_12.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:55:03</td>
+																	<td class='step-details'>Clicked on Passed Verification&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_13.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:55:08</td>
+																	<td class='step-details'>Clicked on Manage Policy</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:55:15</td>
+																	<td class='step-details'>Clicked on Mid Term Adjustment&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_14.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:55:17</td>
+																	<td class='step-details'>Entered the Date : 25/07/2018</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:55:19</td>
+																	<td class='step-details'>Selected MidTerm Reason : Change contact details</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:55:46</td>
+																	<td class='step-details'>Mid Term Continue button clicked</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:56:09</td>
+																	<td class='step-details'>Home emergency cover added successfully</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:56:29</td>
+																	<td class='step-details'>Clicked on Buy button&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_15.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:56:34</td>
+																	<td class='step-details'>Selected menu option: 101</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:56:34</td>
+																	<td class='step-details'>Selected on MTA reason</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:56:34</td>
+																	<td class='step-details'>Clicked on next button in get quote page</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:56:38</td>
+																	<td class='step-details'>Payment reference number :673&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_16.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:57:43</td>
+																	<td class='step-details'>Clicked on Confirm button&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_17.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:57:45</td>
+																	<td class='step-details'>Navigated to customer dashboard page after MTA is completed</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>21:57:48</td>
+																	<td class='step-details'>Policy Created Successfully. Policy URN : 6823757, Policy Position : MidTermAdjustment, Policy Status : Accepted&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_20.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:57:50</td>
+																	<td class='step-details'>MTA performed succesfully on NB accepted policy&emsp;<a href=".\ScreenShot\TC_01_UXP_SS_21.png" target="_blank" >[ScreenShot]</a></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id='test-details-wrapper' class='col _addedCell2'>
+					<div class='contents'>
+						<div class='card-panel details-view'>
+							<h5 class='details-name'></h5>
+							<div class='step-filters right'>
+								<span class='btn-floating btn-small waves-effect waves-light blue' status='info' alt='info' title='info'><i class='mdi-action-info-outline'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light green' status='pass' alt='pass' title='pass'><i class='mdi-action-check-circle'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red' status='fail' alt='fail' title='fail'><i class='mdi-navigation-cancel'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red darken-4' status='fatal' alt='fatal' title='fatal'><i class='mdi-navigation-cancel'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red lighten-2' status='error' alt='error' title='error'><i class='mdi-alert-error'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light orange' alt='warning' status='warning' title='warning'><i class='mdi-alert-warning'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light cyan' status='skip' alt='skip' title='skip'><i class='mdi-content-redo'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light grey darken-2' status='clear-step-filter' alt='Clear filters' title='Clear filters'><i class='mdi-content-clear'></i></span>
+							</div>
+							<div class='details-container'>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /tests -->
+			
+			<!-- categories -->
+				<div id='categories-view' class='row _addedTable hide'>
+					<div class='col _addedCell1'>
+						<div class='contents'>
+							<div class='card-panel heading'>
+								<h5>Categories</h5>
+							</div>
+							<div class='card-panel filters'>
+								<div class='search' alt='Search tests' title='Search tests'>
+									<div class='input-field left'>
+										<input id='searchTests' type='text' class='validate' placeholder='Search...'>
+									</div>
+									<a href="#" class='btn-floating btn-small waves-effect waves-light blue lighten-1'>
+										<i class='mdi-action-search'></i>
+									</a>
+								</div>
+							</div>
+							<div class='card-panel no-padding-h no-padding-v'>
+								<div class='wrapper'>
+									<ul id='cat-collection' class='cat-collection'>
+											<li class='category-item displayed'>
+												<div class='cat-head'>
+													<span class='category-name'>UXP_SS</span>
+												</div>
+												<div class='category-status-counts'>
+														<span class='pass label dot'>Pass: 1</span>
+												</div>
+												<div class='cat-body'>
+													<div class='category-status-counts'>
+														<div class='button-group'>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>1</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+														</div>
+													</div>
+													<div class='cat-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody>
+																	<tr class='pass'>
+																		<td>2018-07-25 21:50:45</td>
+																		<td><span class='category-link linked' extentid='0ed542bb-0984-43ec-ade0-97aa99018392'>TC_01 - Create 3* annual in WJ - Store customer details in CustomerInfo desktop application - Verifying policy details in Self-service - Enabling credentials through SoapUI - Performing MTA to add additonal cover [W7_chrome52]</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+															<tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id='cat-details-wrapper' class='col _addedCell2'>
+						<div class='contents'>
+							<div class='card-panel details-view'>
+								<h5 class='cat-name'></h5>
+								<div class='cat-container'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- /categories -->
+			
+			<!-- exceptions -->
+			<!-- /exceptions -->
+			
+			<!-- testrunner logs -->
+			<!-- /testrunner logs -->
+			
+		</div>
+		<!-- /container -->
+		
+		<!-- test dashboard counts setting -->
+		<div id='test-count-setting' class='modal bottom-sheet'> 
+			<div class='modal-content'> 
+				<h5>Configure Tests Count Setting</h5> 
+				<input name='test-count-setting' type='radio' id='parentWithoutNodes' class='with-gap'> 
+				<label for='parentWithoutNodes'>Parent Tests Only (Does not include child nodes in counts)</label> 
+				<br> 
+				<input name='test-count-setting' type='radio' id='parentWithoutNodesAndNodes' class='with-gap'> 
+				<label for='parentWithoutNodesAndNodes'>Parent Tests Without Child Tests + Child Tests</label> 
+				<br> 
+				<input name='test-count-setting' type='radio' id='childNodes' class='with-gap'> 
+				<label for='childNodes'>Child Tests Only</label> 
+			</div> 
+			<div class='modal-footer'> 
+				<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+			</div> 
+		</div>
+		<!-- /test dashboard counts setting -->
+		
+		<!-- filter for step status -->
+		<div id='step-status-filter' class='modal bottom-sheet'> 
+			<div class='modal-content'> 
+				<h5>Select status</h5> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-pass'> 
+				<label for='step-dashboard-filter-pass'>Pass</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fail'> 
+				<label for='step-dashboard-filter-fail'>Fail</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fatal'> 
+				<label for='step-dashboard-filter-fatal'>Fatal</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-error'> 
+				<label for='step-dashboard-filter-error'>Error</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-warning'> 
+				<label for='step-dashboard-filter-warning'>Warning</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-skip'> 
+				<label for='step-dashboard-filter-skip'>Skipped</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-info'> 
+				<label for='step-dashboard-filter-info'>Info</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-unknown'> 
+				<label for='step-dashboard-filter-unknown'>Unknown</label> 
+			</div>
+			<div class='modal-footer'> 
+				<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+			</div> 
+		</div>
+		<!-- /filter for step status -->
+		
+		<script src='https://cdn.rawgit.com/anshooarora/extentreports/6032d73243ba4fe4fb8769eb9c315d4fdf16fe68/cdn/extent.js' type='text/javascript'></script>
+
+		<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
+		<script>
+				
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+		</script>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="HOOD Automation" verbose="3" parallel="tests" thread-count = "2">
+	<parameter name="securityTest" value="false" />
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="5551" />
+	<parameter name="browserName" value="" ></parameter>
+	<parameter name="email" value="${email}" ></parameter>
+	<parameter name="createemail" value="createmailj${BUILD_NUMBER}" ></parameter>
+	<parameter name="policy_number" value="" ></parameter>
+	<parameter name="ZAP_Location"
+		value="C:\\Program Files\\OWASP\\Zed Attack Proxy\\" ></parameter>	
+	<test name="WJ-ASDA-SMOKE" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.smoke.UXP_WJ"></class>
+		</classes>
+	</test>	 
+	<test name="SS-ASDA-SMOKE" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.smoke.UXP_SS">				
+			</class>			
+		</classes>
+	</test>
+	<test name="EC-ASDA-SMOKE" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.smoke.UXP_EC_SMOKE"></class>
+		</classes>
+	</test>	 
+	<test name="EC-ASDA-STA" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.regression.UXP_EC_STA">
+			</class>			   
+		</classes>
+	</test>
+	<test name="EC-ASDA-MTA" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.regression.UXP_EC_MTA"></class>			
+		</classes>
+	</test>
+	<test name="EC-WESTBROM-SMOKE" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.smoke.UXP_EC_SMOKE_WB"></class>			
+		</classes>
+	</test>
+	<test name="EC-WESTBROM-STA" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.regression.UXP_EC_STA_WB"></class>			
+		</classes>
+	</test>
+	<test name="EC-WESTBROM-MTA" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.regression.UXP_EC_MTA_WB"></class>			
+		</classes>
+	</test>
+	<test name="EC-ASDA-Renewals" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.regression.UXP_EC_1613"></class>
+			<class name="com.ssp.testscripts.regression.UXP_EC_1614"></class>	
+			<class name="com.ssp.testscripts.regression.UXP_EC_1699"></class>				
+		</classes>
+	</test>
+	<test name="EC-WB-Renewals" parallel="methods" thread-count = "3" enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser_version" value="52"></parameter>
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="os_version" value="7"></parameter>
+		<parameter name="env" value=""></parameter>
+		<parameter name="webSite" value=""></parameter>		
+		<classes>
+			<class name="com.ssp.testscripts.regression.UXP_EC_1613_WB"></class>
+			<class name="com.ssp.testscripts.regression.UXP_EC_1614_WB"></class>	
+			<class name="com.ssp.testscripts.regression.UXP_EC_1699_WB"></class>				
+		</classes>
+	</test>
+</suite>
